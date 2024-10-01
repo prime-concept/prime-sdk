@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="seB-qr-eXe" customClass="TicketsBookerCalendarItemView" customModule="PrimeSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="122" height="97"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="сб" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2De-8c-kLV">
+                    <rect key="frame" x="0.0" y="7" width="122" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="AL6-eC-21H"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zea-0f-f4F">
+                    <rect key="frame" x="0.0" y="24" width="122" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="999" constant="20" id="CKV-LF-rwU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="сен" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQc-ry-Jma">
+                    <rect key="frame" x="0.0" y="76" width="122" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="6g7-fb-Hh0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMv-TH-vZL" customClass="CalendarDayFakeButton" customModule="PrimeSDK" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="122" height="97"/>
+                    <connections>
+                        <action selector="onItemClick:" destination="seB-qr-eXe" eventType="touchUpInside" id="8OG-YZ-8Hl"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="RMv-TH-vZL" firstAttribute="trailing" secondItem="mE9-Ir-ckv" secondAttribute="trailing" id="GJ8-BU-Faq"/>
+                <constraint firstItem="zea-0f-f4F" firstAttribute="leading" secondItem="mE9-Ir-ckv" secondAttribute="leading" id="J2V-Ej-BD3"/>
+                <constraint firstItem="BQc-ry-Jma" firstAttribute="top" secondItem="zea-0f-f4F" secondAttribute="bottom" constant="2" id="NIb-qk-Ce6"/>
+                <constraint firstItem="2De-8c-kLV" firstAttribute="top" secondItem="seB-qr-eXe" secondAttribute="top" constant="7" id="Pgm-ek-6zY"/>
+                <constraint firstItem="mE9-Ir-ckv" firstAttribute="trailing" secondItem="zea-0f-f4F" secondAttribute="trailing" id="RIZ-Uq-SwJ"/>
+                <constraint firstItem="mE9-Ir-ckv" firstAttribute="trailing" secondItem="2De-8c-kLV" secondAttribute="trailing" id="Sg1-le-Okt"/>
+                <constraint firstItem="2De-8c-kLV" firstAttribute="leading" secondItem="mE9-Ir-ckv" secondAttribute="leading" id="Uxm-5o-HZc"/>
+                <constraint firstItem="RMv-TH-vZL" firstAttribute="leading" secondItem="seB-qr-eXe" secondAttribute="leading" id="V8B-AY-Hb2"/>
+                <constraint firstItem="mE9-Ir-ckv" firstAttribute="bottom" secondItem="RMv-TH-vZL" secondAttribute="bottom" id="VM1-TI-jrg"/>
+                <constraint firstItem="BQc-ry-Jma" firstAttribute="leading" secondItem="mE9-Ir-ckv" secondAttribute="leading" id="cug-eN-F9K"/>
+                <constraint firstItem="mE9-Ir-ckv" firstAttribute="trailing" secondItem="BQc-ry-Jma" secondAttribute="trailing" id="jWx-9w-TQD"/>
+                <constraint firstAttribute="bottom" secondItem="BQc-ry-Jma" secondAttribute="bottom" constant="6" id="lpw-ob-lF1"/>
+                <constraint firstItem="zea-0f-f4F" firstAttribute="top" secondItem="2De-8c-kLV" secondAttribute="bottom" constant="2" id="p6n-Fn-mdc"/>
+                <constraint firstItem="RMv-TH-vZL" firstAttribute="top" secondItem="seB-qr-eXe" secondAttribute="top" id="r0J-aN-H0R"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="mE9-Ir-ckv"/>
+            <connections>
+                <outlet property="bottomLabel" destination="BQc-ry-Jma" id="qZz-Gd-IX7"/>
+                <outlet property="mainLabel" destination="zea-0f-f4F" id="gtF-Sb-Qz7"/>
+                <outlet property="topLabel" destination="2De-8c-kLV" id="3qI-sa-u7G"/>
+            </connections>
+            <point key="canvasLocation" x="88.405797101449281" y="113.50446428571428"/>
+        </view>
+    </objects>
+</document>

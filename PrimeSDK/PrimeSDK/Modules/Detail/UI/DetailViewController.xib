@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="PrimeSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="ZZM-lp-1ZO" id="pYV-Aa-EXS"/>
+                <outlet property="tableView" destination="T51-3Q-jk4" id="v1N-1f-DXQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T51-3Q-jk4" customClass="DetailTableView" customModule="PrimeSDK" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZM-lp-1ZO" customClass="DetailCloseButton" customModule="PrimeSDK" customModuleProvider="target">
+                    <rect key="frame" x="328" y="6" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="d9g-2T-hBx"/>
+                        <constraint firstAttribute="width" constant="32" id="vBu-0p-eby"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="cd1-be-div"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZZM-lp-1ZO" secondAttribute="trailing" constant="15" id="4Av-af-f4T"/>
+                <constraint firstItem="T51-3Q-jk4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" placeholder="YES" id="8tY-Lg-ghW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="T51-3Q-jk4" secondAttribute="bottom" id="HdY-4a-Ykc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="T51-3Q-jk4" secondAttribute="trailing" id="UUr-1c-7eq"/>
+                <constraint firstItem="T51-3Q-jk4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UjR-9F-bPx"/>
+                <constraint firstItem="ZZM-lp-1ZO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="6" placeholder="YES" id="db9-SP-ULx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

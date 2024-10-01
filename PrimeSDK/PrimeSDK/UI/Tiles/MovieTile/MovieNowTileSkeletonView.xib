@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="DtE-OG-raW" customClass="MovieNowTileSkeletonView" customModule="PrimeSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WIa-wg-gXb">
+                    <rect key="frame" x="15" y="5" width="90" height="125"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="6Jr-lB-muF"/>
+                        <constraint firstAttribute="width" constant="90" id="vMU-Qb-wNl"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxz-Mk-qcT">
+                    <rect key="frame" x="115" y="6" width="69" height="12"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="6JH-h1-biw"/>
+                        <constraint firstAttribute="width" constant="69" id="GWs-nv-oET"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                    <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHY-tB-qie">
+                    <rect key="frame" x="115" y="24" width="135" height="14"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="135" id="BbG-aP-E5w"/>
+                        <constraint firstAttribute="height" constant="14" id="POE-m8-vfu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwU-v7-5Yg">
+                    <rect key="frame" x="115" y="66" width="150" height="9"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="9" id="Jd1-lB-yj7"/>
+                        <constraint firstAttribute="width" constant="150" id="Nvi-iw-s6v"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIH-Gu-8Jk">
+                    <rect key="frame" x="115" y="81" width="170" height="9"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="9" id="1G9-5u-Y8B"/>
+                        <constraint firstAttribute="width" constant="170" id="7pj-f6-Dqh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxp-37-fwr">
+                    <rect key="frame" x="115" y="44" width="55" height="14"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="9dj-5K-qJP"/>
+                        <constraint firstAttribute="width" constant="55" id="LEU-tr-Ata"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIF-MD-rxd">
+                    <rect key="frame" x="115" y="96" width="132" height="9"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="9" id="QxE-9b-SPB"/>
+                        <constraint firstAttribute="width" constant="132" id="lcn-eo-3at"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="TwU-v7-5Yg" firstAttribute="leading" secondItem="WIa-wg-gXb" secondAttribute="trailing" constant="10" id="0s9-VK-YbW"/>
+                <constraint firstItem="gxz-Mk-qcT" firstAttribute="top" secondItem="DtE-OG-raW" secondAttribute="top" constant="6" id="7tz-bS-BW5"/>
+                <constraint firstItem="Gxp-37-fwr" firstAttribute="top" secondItem="WHY-tB-qie" secondAttribute="bottom" constant="6" id="9UC-B4-w2D"/>
+                <constraint firstItem="OIH-Gu-8Jk" firstAttribute="top" secondItem="TwU-v7-5Yg" secondAttribute="bottom" constant="6" id="HK4-Wo-4RS"/>
+                <constraint firstItem="TwU-v7-5Yg" firstAttribute="top" secondItem="Gxp-37-fwr" secondAttribute="bottom" constant="8" id="JdT-19-B6k"/>
+                <constraint firstItem="gxz-Mk-qcT" firstAttribute="leading" secondItem="WIa-wg-gXb" secondAttribute="trailing" constant="10" id="XQx-TW-Gp9"/>
+                <constraint firstItem="tIF-MD-rxd" firstAttribute="leading" secondItem="WIa-wg-gXb" secondAttribute="trailing" constant="10" id="XmT-QO-Hye"/>
+                <constraint firstItem="rHZ-25-ZPG" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WHY-tB-qie" secondAttribute="trailing" constant="40" id="bfp-kD-CyM"/>
+                <constraint firstItem="Gxp-37-fwr" firstAttribute="leading" secondItem="WIa-wg-gXb" secondAttribute="trailing" constant="10" id="g0N-V8-TdX"/>
+                <constraint firstItem="tIF-MD-rxd" firstAttribute="top" secondItem="OIH-Gu-8Jk" secondAttribute="bottom" constant="6" id="hAG-4t-VZS"/>
+                <constraint firstItem="WIa-wg-gXb" firstAttribute="leading" secondItem="rHZ-25-ZPG" secondAttribute="leading" constant="15" id="hrw-jn-Jzm"/>
+                <constraint firstItem="WIa-wg-gXb" firstAttribute="top" secondItem="DtE-OG-raW" secondAttribute="top" constant="5" id="m01-4z-Yh1"/>
+                <constraint firstItem="OIH-Gu-8Jk" firstAttribute="leading" secondItem="WIa-wg-gXb" secondAttribute="trailing" constant="10" id="pBv-J0-Whw"/>
+                <constraint firstItem="WHY-tB-qie" firstAttribute="top" secondItem="gxz-Mk-qcT" secondAttribute="bottom" constant="6" id="pax-S3-auV"/>
+                <constraint firstAttribute="bottom" secondItem="WIa-wg-gXb" secondAttribute="bottom" constant="10" id="ukF-ZN-wSn"/>
+                <constraint firstItem="WHY-tB-qie" firstAttribute="leading" secondItem="WIa-wg-gXb" secondAttribute="trailing" constant="10" id="yEo-vp-9cK"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="rHZ-25-ZPG"/>
+            <point key="canvasLocation" x="80.434782608695656" y="39.508928571428569"/>
+        </view>
+    </objects>
+</document>

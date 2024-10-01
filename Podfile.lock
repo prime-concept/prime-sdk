@@ -1,0 +1,155 @@
+PODS:
+  - Alamofire (4.7.3)
+  - Branch (0.37.0)
+  - DeckTransition (2.1.0)
+  - FloatingPanel (1.7.1)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - libwebp (1.0.0):
+    - libwebp/core (= 1.0.0)
+    - libwebp/dec (= 1.0.0)
+    - libwebp/demux (= 1.0.0)
+    - libwebp/dsp (= 1.0.0)
+    - libwebp/enc (= 1.0.0)
+    - libwebp/mux (= 1.0.0)
+    - libwebp/utils (= 1.0.0)
+    - libwebp/webp (= 1.0.0)
+  - libwebp/core (1.0.0):
+    - libwebp/webp
+  - libwebp/dec (1.0.0):
+    - libwebp/core
+  - libwebp/demux (1.0.0):
+    - libwebp/core
+  - libwebp/dsp (1.0.0):
+    - libwebp/core
+  - libwebp/enc (1.0.0):
+    - libwebp/core
+  - libwebp/mux (1.0.0):
+    - libwebp/core
+  - libwebp/utils (1.0.0):
+    - libwebp/core
+  - libwebp/webp (1.0.0)
+  - Nimble (8.0.2)
+  - Nuke (8.3.1)
+  - Nuke-WebP-Plugin (4.0.0):
+    - libwebp (= 1.0.0)
+    - Nuke (~> 8.0)
+  - PromiseKit (6.5.2):
+    - PromiseKit/CorePromise (= 6.5.2)
+    - PromiseKit/Foundation (= 6.5.2)
+    - PromiseKit/UIKit (= 6.5.2)
+  - PromiseKit/CorePromise (6.5.2)
+  - PromiseKit/Foundation (6.5.2):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.5.2):
+    - PromiseKit/CorePromise
+  - Quick (2.1.0)
+  - SkeletonView (1.8.2)
+  - SnapKit (5.0.0)
+  - STRegex (2.0.0)
+  - SwiftLint (0.33.0)
+  - SwiftMessages (7.0.0):
+    - SwiftMessages/App (= 7.0.0)
+  - SwiftMessages/App (7.0.0)
+  - SwiftyJSON (5.0.0)
+  - TagListView (1.3.2)
+  - UICollectionViewLeftAlignedLayout (2.0.0)
+  - UIColor_Hex_Swift (4.2.0)
+  - YandexMobileAds/Dynamic (2.20.0):
+    - YandexMobileMetrica/Dynamic (< 4.0.0, >= 3.2.0)
+  - YandexMobileMetrica/Dynamic (3.16.0):
+    - YandexMobileMetrica/Dynamic/Core (= 3.16.0)
+    - YandexMobileMetrica/Dynamic/Crashes (= 3.16.0)
+  - YandexMobileMetrica/Dynamic/Core (3.16.0)
+  - YandexMobileMetrica/Dynamic/Crashes (3.16.0):
+    - YandexMobileMetrica/Dynamic/Core
+  - YoutubeKit (0.5.0)
+
+DEPENDENCIES:
+  - Alamofire (= 4.7.3)
+  - Branch (= 0.37.0)
+  - DeckTransition (= 2.1.0)
+  - FloatingPanel (= 1.7.1)
+  - GoogleMaps (= 2.7.0)
+  - Nimble (= 8.0.2)
+  - Nuke (= 8.3.1)
+  - Nuke-WebP-Plugin (= 4.0.0)
+  - PromiseKit (= 6.5.2)
+  - Quick (= 2.1.0)
+  - SkeletonView (= 1.8.2)
+  - SnapKit (= 5.0.0)
+  - STRegex (= 2.0.0)
+  - SwiftLint (= 0.33.0)
+  - SwiftMessages (= 7.0.0)
+  - SwiftyJSON (= 5.0.0)
+  - TagListView (= 1.3.2)
+  - UICollectionViewLeftAlignedLayout (from `https://github.com/coeur/UICollectionViewLeftAlignedLayout.git`)
+  - UIColor_Hex_Swift (~> 4.2.0)
+  - YandexMobileAds/Dynamic (= 2.20.0)
+  - YoutubeKit (= 0.5.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Branch
+    - DeckTransition
+    - FloatingPanel
+    - GoogleMaps
+    - libwebp
+    - Nimble
+    - Nuke
+    - Nuke-WebP-Plugin
+    - PromiseKit
+    - Quick
+    - SkeletonView
+    - SnapKit
+    - STRegex
+    - SwiftLint
+    - SwiftMessages
+    - SwiftyJSON
+    - TagListView
+    - UIColor_Hex_Swift
+    - YandexMobileAds
+    - YandexMobileMetrica
+    - YoutubeKit
+
+EXTERNAL SOURCES:
+  UICollectionViewLeftAlignedLayout:
+    :git: https://github.com/coeur/UICollectionViewLeftAlignedLayout.git
+
+CHECKOUT OPTIONS:
+  UICollectionViewLeftAlignedLayout:
+    :commit: 15ddc466c932aa7cdf5d479cd003911e8c5276ac
+    :git: https://github.com/coeur/UICollectionViewLeftAlignedLayout.git
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Branch: 49c609eb0ac0130b8491d0923a9298714731bd0d
+  DeckTransition: ca707456e3d83928c895fed6f458cbf68c5cac84
+  FloatingPanel: 2f87246071476cf05d77ba3f50a373ca4b04549e
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  libwebp: d7e0c95fe97245c97e08101eba10702ebb0f6101
+  Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
+  Nuke: 85fb80f8df0cb26c28d2f4e0cb7fb93bcd6548d3
+  Nuke-WebP-Plugin: 1d582afdee4884da4c8e5237df4e46d8468c4c4d
+  PromiseKit: 27c1601bfb73405871b805bcb8cf7e55c4dad3db
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  SkeletonView: bb27c39857e5492136f02ee8a3aa78de55d12ecd
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  STRegex: dc7c8082a77c521315a6339f86abf125b8c3feb8
+  SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
+  SwiftMessages: a952f7a9103d9aeab93730a2861d2d8fcdd8758f
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  TagListView: 0c7e9c26b9aff858224ee6b155f5fcacd9e27c83
+  UICollectionViewLeftAlignedLayout: ccb93790d907ba4befd1450542d9e48e4e669459
+  UIColor_Hex_Swift: bc07fc197421ee896b9ed6dcfa2054b7fbf75145
+  YandexMobileAds: 1c1e2592d71bdbbf1a4617dd8619ff12da06bfb8
+  YandexMobileMetrica: 2ab55883ea552a4c4ea4516a3353ca0577a747cc
+  YoutubeKit: 9f66eba839211158f2aac7ad3833593bd56fa8f9
+
+PODFILE CHECKSUM: 992e9d704f61dde0362cfd543194aae0ff0974e4
+
+COCOAPODS: 1.11.2

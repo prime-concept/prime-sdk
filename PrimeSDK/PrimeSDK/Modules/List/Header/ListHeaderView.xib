@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ListHeaderView" customModule="PrimeSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3D9-Zl-jsb">
+                    <rect key="frame" x="15" y="10" width="345" height="77"/>
+                    <string key="text">Отсебяшный текст. Отвечайте на вопросы
+и получайте баллы за правильные ответы. Квесты можно получить на площадках их проведения. Намастэ.</string>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Текущие квесты" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rV1-We-UXI">
+                    <rect key="frame" x="15" y="107" width="345" height="15"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                    <color key="textColor" red="0.74901960784313726" green="0.74901960784313726" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rV1-We-UXI" secondAttribute="bottom" constant="10" id="E9b-A7-nvV"/>
+                <constraint firstItem="3D9-Zl-jsb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="Fjy-Dc-n0c"/>
+                <constraint firstAttribute="trailing" secondItem="3D9-Zl-jsb" secondAttribute="trailing" constant="15" id="IRZ-nm-OgC"/>
+                <constraint firstItem="3D9-Zl-jsb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="IvQ-SK-7fD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rV1-We-UXI" secondAttribute="trailing" constant="15" id="NfT-oM-tti"/>
+                <constraint firstItem="rV1-We-UXI" firstAttribute="top" secondItem="3D9-Zl-jsb" secondAttribute="bottom" constant="20" id="Ruk-SV-Ajp"/>
+                <constraint firstItem="rV1-We-UXI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="eBU-K8-gAr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="infoLabel" destination="3D9-Zl-jsb" id="Rck-ug-2eI"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="-94.452773613193415"/>
+        </view>
+    </objects>
+</document>

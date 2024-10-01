@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="KGk-i7-Jjw" customClass="DetailCalendarTableViewCell" customModule="Armenia_Guide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="75.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Dv-0k-DgO">
+                        <rect key="frame" x="15" y="74.5" width="290" height="1"/>
+                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="R8Q-xi-GfP"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hz-N6-gRF">
+                        <rect key="frame" x="15" y="15" width="252" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <color key="textColor" red="0.74901960784313726" green="0.74901960784313726" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCp-dw-Eyg">
+                        <rect key="frame" x="15" y="41.5" width="252" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar-schedule" translatesAutoresizingMaskIntoConstraints="NO" id="DzM-iV-JTA">
+                        <rect key="frame" x="275" y="16" width="30" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="GRK-oY-3C3"/>
+                            <constraint firstAttribute="height" constant="44" id="GsF-W8-yTo"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1Dv-0k-DgO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kCp-dw-Eyg" secondAttribute="bottom" constant="15.5" id="3JX-MG-DoA"/>
+                    <constraint firstItem="DzM-iV-JTA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="40c-kg-wsr"/>
+                    <constraint firstAttribute="trailing" secondItem="1Dv-0k-DgO" secondAttribute="trailing" constant="15" id="Gzl-Bf-CLV"/>
+                    <constraint firstItem="DzM-iV-JTA" firstAttribute="leading" secondItem="3hz-N6-gRF" secondAttribute="trailing" constant="8" id="ICr-bj-yGN"/>
+                    <constraint firstItem="kCp-dw-Eyg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="JBz-3y-oLq"/>
+                    <constraint firstItem="3hz-N6-gRF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Oaj-ZG-lHC"/>
+                    <constraint firstItem="kCp-dw-Eyg" firstAttribute="top" secondItem="3hz-N6-gRF" secondAttribute="bottom" constant="7" id="ZA1-gD-0DD"/>
+                    <constraint firstItem="DzM-iV-JTA" firstAttribute="leading" secondItem="kCp-dw-Eyg" secondAttribute="trailing" constant="8" id="hoV-SG-JwB"/>
+                    <constraint firstItem="3hz-N6-gRF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="ihm-YQ-Yib"/>
+                    <constraint firstItem="1Dv-0k-DgO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="mjX-pu-vUm"/>
+                    <constraint firstAttribute="bottom" secondItem="1Dv-0k-DgO" secondAttribute="bottom" id="t6v-hm-Lkc"/>
+                    <constraint firstAttribute="trailing" secondItem="DzM-iV-JTA" secondAttribute="trailing" constant="15" id="zCR-kp-d1h"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bottomLabel" destination="kCp-dw-Eyg" id="yKi-OG-HFJ"/>
+                <outlet property="separatorView" destination="1Dv-0k-DgO" id="ghS-rL-ke1"/>
+                <outlet property="topLabel" destination="3hz-N6-gRF" id="Fkg-vT-V8Y"/>
+            </connections>
+            <point key="canvasLocation" x="33.600000000000001" y="108.84557721139431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="calendar-schedule" width="30" height="44"/>
+    </resources>
+</document>

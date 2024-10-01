@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DetailTaxiView" customModule="ADG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="61"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cCy-bD-dBj">
+                    <rect key="frame" x="15" y="15" width="336" height="36"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOM-3e-Fb4">
+                            <rect key="frame" x="0.0" y="0.0" width="336" height="36"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yandex-taxi" translatesAutoresizingMaskIntoConstraints="NO" id="fs8-ad-x1j">
+                                    <rect key="frame" x="10" y="10" width="16" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16" id="aSI-F7-0AE"/>
+                                        <constraint firstAttribute="width" constant="16" id="ouC-nt-zdk"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNo-4q-74S">
+                                    <rect key="frame" x="36" y="10" width="268" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16" id="mSj-cg-etW"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                    <color key="textColor" red="0.45098039215686275" green="0.76862745098039209" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_right" translatesAutoresizingMaskIntoConstraints="NO" id="zA6-fM-Ffc">
+                                    <rect key="frame" x="314" y="12" width="8" height="12"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.45098039215686275" green="0.76862745098039209" blue="0.80000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="2zI-J7-fhe"/>
+                                <constraint firstItem="uNo-4q-74S" firstAttribute="leading" secondItem="fs8-ad-x1j" secondAttribute="trailing" constant="10" id="7y8-G0-fs4"/>
+                                <constraint firstAttribute="bottom" secondItem="fs8-ad-x1j" secondAttribute="bottom" constant="10" id="CuD-bB-c6S"/>
+                                <constraint firstItem="uNo-4q-74S" firstAttribute="top" secondItem="YOM-3e-Fb4" secondAttribute="top" constant="10" id="RlF-gQ-GC3"/>
+                                <constraint firstItem="zA6-fM-Ffc" firstAttribute="leading" secondItem="uNo-4q-74S" secondAttribute="trailing" constant="10" id="XU6-a2-LxT"/>
+                                <constraint firstItem="fs8-ad-x1j" firstAttribute="top" secondItem="YOM-3e-Fb4" secondAttribute="top" constant="10" id="Ydk-NQ-cnK"/>
+                                <constraint firstItem="zA6-fM-Ffc" firstAttribute="top" secondItem="YOM-3e-Fb4" secondAttribute="top" constant="12" id="dvE-7q-a2q"/>
+                                <constraint firstItem="fs8-ad-x1j" firstAttribute="leading" secondItem="YOM-3e-Fb4" secondAttribute="leading" constant="10" id="jRF-bI-msn"/>
+                                <constraint firstAttribute="bottom" secondItem="zA6-fM-Ffc" secondAttribute="bottom" constant="12" id="q1O-1R-BBi"/>
+                                <constraint firstAttribute="bottom" secondItem="uNo-4q-74S" secondAttribute="bottom" constant="10" id="rAo-9L-Rbm"/>
+                                <constraint firstAttribute="trailing" secondItem="zA6-fM-Ffc" secondAttribute="trailing" constant="14" id="u8s-oy-BVi"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BYR-W4-T6n">
+                    <rect key="frame" x="15" y="15" width="336" height="36"/>
+                    <subviews>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6w-fe-OU6" customClass="TaxiFakeButton" customModule="ADG" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="336" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="KDS-Fq-iN5"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onYandexTaxiButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="qee-5G-W8c"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cCy-bD-dBj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="FZR-Mk-bHT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cCy-bD-dBj" secondAttribute="bottom" constant="10" id="KBY-sQ-IBB"/>
+                <constraint firstItem="BYR-W4-T6n" firstAttribute="height" secondItem="cCy-bD-dBj" secondAttribute="height" id="Kgl-5c-9mq"/>
+                <constraint firstItem="BYR-W4-T6n" firstAttribute="trailing" secondItem="cCy-bD-dBj" secondAttribute="trailing" id="NgX-2L-By6"/>
+                <constraint firstItem="BYR-W4-T6n" firstAttribute="leading" secondItem="cCy-bD-dBj" secondAttribute="leading" id="Z12-8Z-h3E"/>
+                <constraint firstItem="BYR-W4-T6n" firstAttribute="top" secondItem="cCy-bD-dBj" secondAttribute="top" id="Znt-xW-HRG"/>
+                <constraint firstItem="cCy-bD-dBj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="cKz-uT-LtW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cCy-bD-dBj" secondAttribute="trailing" constant="15" id="dQD-Ct-L5A"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="yandexTaxiArrowImageView" destination="zA6-fM-Ffc" id="n7p-tR-eay"/>
+                <outlet property="yandexTaxiLabel" destination="uNo-4q-74S" id="5ED-Tn-dp3"/>
+            </connections>
+            <point key="canvasLocation" x="28.800000000000001" y="-250.52473763118442"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_right" width="8" height="14"/>
+        <image name="yandex-taxi" width="16" height="16"/>
+    </resources>
+</document>

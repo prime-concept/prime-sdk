@@ -1,0 +1,301 @@
+{
+   "views":[
+      {
+         "type":"home-vertical-container",
+         "name":"home-vertical-container",
+         "header":"home-header-image",
+         "subviews":[
+            "titled-horizontal-list-events",
+            "titled-horizontal-list-venues",
+            "home-colored-container",
+            "home-colored-container-test"
+         ],
+         "attributes":{
+            "text":"Подробнее →",
+            "text_color":"#ffffff",
+            "alpha":0.70,
+            "hidden":false,
+            "radius":17.5,
+            "url":"knhd://movies/26320",
+            "inset":450
+         }
+      },
+      {
+         "type":"home-header-image",
+         "name":"home-header-image",
+         "attributes":{
+            "path":"https://i.ibb.co/L601ztP/Rectangle-2.png",
+            "height":650,
+            "gradient_height":200
+         }
+      },
+      {
+         "type":"titled-horizontal-list",
+         "name":"titled-horizontal-list-events",
+         "subviews":[
+            "flat-event-card"
+         ],
+         "attributes":{
+            "item_width":145,
+            "item_height":248,
+            "spacing":6,
+            "show_title":true,
+            "title":"Концерты и шоу",
+            "title_color":"#A10226",
+            "all_color":"#A10226"
+         },
+         "actions":{
+            "load":"load-events-horizontal-list",
+            "tap_all":"show-events-all"
+         }
+      },
+      {
+         "type":"flat-movie-card",
+         "name":"flat-event-card",
+         "attributes":{
+            
+         },
+         "actions":{
+            "tap":"tap-event-card-open-detail"
+         }
+      },
+      {
+         "type":"titled-horizontal-list",
+         "name":"titled-horizontal-list-venues",
+         "subviews":[
+            "place-card"
+         ],
+         "attributes":{
+            "item_width":345,
+            "item_height":120,
+            "spacing":6,
+            "show_title":true,
+            "title":"Venues",
+            "title_color":"#A10226",
+            "all_color":"#A10226",
+            "side_insets": 10
+         },
+         "actions":{
+            "load":"load-places-page",
+            "tap_all":"show-events-all"
+         }
+      },
+      {
+          "type": "section-card",
+          "name": "place-card",
+          "attributes": {
+              "is_favorite_enabled": true,
+              "is_sharing_enabled": true,
+              "title_color": "#FFFFFF",
+              "title": "",
+              "tap_url": "https://google.com",
+              "entity_type": "places"
+          },
+          "actions": {
+              "tap": "tap-place-card-open-detail",
+              "toggle_favorite": "toggle-detail-favorite",
+              "share": "share-venue"
+          }
+      },
+      {
+         "type":"titled-horizontal-list",
+         "name":"titled-horizontal-list-restaurants",
+         "subviews":[
+            "restaurant-card"
+         ],
+         "attributes":{
+            "item_width":345,
+            "item_height":120,
+            "spacing":6,
+            "show_title":true,
+            "title":"TOP 10",
+            "title_color":"#AA8F59",
+            "show_all": false,
+            "side_insets": 10
+         },
+         "actions":{
+            "load":"load-restaurants-page",
+            "tap_all":"show-events-all"
+         }
+      },
+      {
+          "type": "section-card",
+          "name": "restaurant-card",
+          "attributes": {
+              "is_favorite_enabled": true,
+              "is_sharing_enabled": true,
+              "title_color": "#FFFFFF",
+              "title": "",
+              "tap_url": "https://google.com",
+              "entity_type": "places"
+          },
+          "actions": {
+              "tap": "tap-place-card-open-detail",
+              "toggle_favorite": "toggle-detail-favorite",
+              "share": "share-venue"
+          }
+      },
+      {
+          "type": "home-colored-container",
+          "name": "home-colored-container",
+          "subviews": [
+              "titled-horizontal-list-restaurants"
+          ],
+          "attributes": {
+              "title": "Gourmet",
+              "radius": 15,
+              "title_color": "#FFFFFF",
+              "background_color_top": "#84391F",
+              "background_color_bottom": "#320D00"
+          }
+      },
+      {
+          "type": "home-colored-container",
+          "name": "home-colored-container-test",
+          "subviews": [
+              "titled-horizontal-list-venues",
+              "titled-horizontal-list-restaurants"
+          ],
+          "attributes": {
+              "title": "Test",
+              "radius": 15,
+              "title_color": "#FF0000",
+              "background_color_top": "#00FF00",
+              "background_color_bottom": "#0000FF"
+          }
+      }
+   ],
+   "actions":[
+      {
+         "name":"load-events-horizontal-list",
+         "type":"load",
+         "request":{
+            "url":"https://ef-dev50.navigator.technolab.com.ru/v1/screens/events",
+            "headers":{
+               "x-app-token":"365e0bb0-e846-11e8-9f32-f2801f1b9fd1",
+               "Content-Type":"application/x-www-form-urlencoded"
+            },
+            "type":"get",
+            "parameters":{
+               "pageSize": 10
+            }
+         },
+         "response":{
+            "deserializer":"events-named-list-deserializer",
+            "deserializers":[
+               {
+                  "name":"events-named-list-deserializer",
+                  "type":"object",
+                  "map":{
+                     "objects":{
+                        "flat-event-card.{{iterator#0}}.title":"{{data.items.{{iterator#0}}.title}}",
+                        "flat-event-card.{{iterator#0}}.id":"{{data.items.{{iterator#0}}.id}}",
+                        "flat-event-card.{{iterator#0}}.image_path":"{{data.items.{{iterator#0}}.images.0.image}}",
+                        "flat-event-card.{{iterator#0}}.premiere_date":"{{data.items.{{iterator#0}}.small_schedule.0}}",
+                        "flat-event-card.{{iterator#0}}.genres": "{{data.items.{{iterator#0}}.substitution.event_type_for_event}}"
+                     },
+                     "substitutions": [
+                         {
+                             "name": "event_type_for_event",
+                             "source": "items",
+                             "target": "event_types",
+                             "fields": {
+                                 "source": "event_types_ids.0",
+                                 "target": "id",
+                                 "extract": "title"
+                             }
+                         }
+                     ]
+                  }
+               }
+            ]
+         }
+      },
+      {
+          "name": "load-places-page",
+          "type": "load",
+          "request": {
+              "url": "https://ef.technolab.com.ru/v1/screens/places",
+              "headers": {
+                  "x-app-token":"365e0bb0-e846-11e8-9f32-f2801f1b9fd1",
+                  "Content-Type":"application/x-www-form-urlencoded"
+              },
+              "type": "get",
+              "parameters": {
+                  "pageSize": 10
+              }
+          },
+          "response": {
+              "deserializer": "places-named-list-deserializer",
+              "deserializers": [
+                  {
+                      "name": "places-named-list-deserializer",
+                      "type": "object",
+                      "map": {
+                          "target": "places-list",
+                          "objects": {
+                              "place-card.{{iterator#0}}.subtitle": "{{data.items.{{iterator#0}}.address}}",
+                              "place-card.{{iterator#0}}.title": "{{data.items.{{iterator#0}}.title}}",
+                              "place-card.{{iterator#0}}.image_path": "{{data.items.{{iterator#0}}.images.0.image}}",
+                              "place-card.{{iterator#0}}.id": "{{data.items.{{iterator#0}}.id}}",
+                              "place-card.{{iterator#0}}.is_favorite": "{{data.items.{{iterator#0}}.is_favorite}}",
+                              "place-card.{{iterator#0}}.lat": "{{data.items.{{iterator#0}}.coordinates.lat}}",
+                              "place-card.{{iterator#0}}.lon": "{{data.items.{{iterator#0}}.coordinates.lng}}"
+                          }
+                      }
+                  }
+              ]
+          }
+      },
+      {
+          "name": "load-restaurants-page",
+          "type": "load",
+          "request": {
+              "url": "https://ef.technolab.com.ru/v1/screens/restaurants",
+              "headers": {
+                  "x-app-token":"365e0bb0-e846-11e8-9f32-f2801f1b9fd1",
+                  "Content-Type":"application/x-www-form-urlencoded"
+              },
+              "type": "get",
+              "parameters": {
+                  "pageSize": 10
+              }
+          },
+          "response": {
+              "deserializer": "restaurants-named-list-deserializer",
+              "deserializers": [
+                  {
+                      "name": "restaurants-named-list-deserializer",
+                      "type": "object",
+                      "map": {
+                          "target": "places-list",
+                          "objects": {
+                              "restaurant-card.{{iterator#0}}.subtitle": "{{data.items.{{iterator#0}}.address}}",
+                              "restaurant-card.{{iterator#0}}.title": "{{data.items.{{iterator#0}}.title}}",
+                              "restaurant-card.{{iterator#0}}.image_path": "{{data.items.{{iterator#0}}.images.0.image}}",
+                              "restaurant-card.{{iterator#0}}.id": "{{data.items.{{iterator#0}}.id}}",
+                              "restaurant-card.{{iterator#0}}.is_favorite": "{{data.items.{{iterator#0}}.is_favorite}}",
+                              "restaurant-card.{{iterator#0}}.lat": "{{data.items.{{iterator#0}}.coordinates.lat}}",
+                              "restaurant-card.{{iterator#0}}.lon": "{{data.items.{{iterator#0}}.coordinates.lng}}"
+                          }
+                      }
+                  }
+              ]
+          },
+      },
+      {
+          "name": "share-venue",
+          "type": "share",
+          "sharing_parameters": {
+              "type": "branch_object",
+              "title": "{{sender.title}}",
+              "image_path": "{{sender.image_path}}"
+          },
+          "module_parameters": {
+              "type": "detail",
+              "name": "event-detail",
+              "attributes.id": "{{sender.id}}"
+          }
+      },
+   ]
+}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="HLe-Ia-uIv" customClass="ActionTileView" customModule="PrimeSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="133"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnp-Dv-fMZ" customClass="BlurView" customModule="PrimeSDK" customModuleProvider="target">
+                    <rect key="frame" x="7" y="7" width="36.5" height="14.5"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300 м" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6Y-aR-lyo" customClass="PaddingLabel" customModule="PrimeSDK" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="36.5" height="14.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="s6Y-aR-lyo" firstAttribute="top" secondItem="fnp-Dv-fMZ" secondAttribute="top" id="9Q2-YC-FHr"/>
+                        <constraint firstItem="s6Y-aR-lyo" firstAttribute="leading" secondItem="fnp-Dv-fMZ" secondAttribute="leading" id="P5p-7K-3md"/>
+                        <constraint firstAttribute="bottom" secondItem="s6Y-aR-lyo" secondAttribute="bottom" id="TSP-lM-GGt"/>
+                        <constraint firstAttribute="trailing" secondItem="s6Y-aR-lyo" secondAttribute="trailing" id="oto-ui-Hos"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Музей-заповедник &quot;Царицыно&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTK-m4-ZUF">
+                    <rect key="frame" x="10" y="71.5" width="255" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2x-iO-Xoq">
+                    <rect key="frame" x="10" y="94" width="205.5" height="29"/>
+                    <string key="text">ул. Дольская, 1
+Выставка, 31-23 янв, 10:00-18:00</string>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="io5-tK-ONh">
+                    <rect key="frame" x="344" y="97" width="19" height="26"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFq-RD-gCL">
+                            <rect key="frame" x="0.0" y="0.0" width="19" height="26"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="19" id="tXe-9G-6fG"/>
+                                <constraint firstAttribute="height" constant="26" id="wWc-Sy-oht"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="share">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="onShareButtonClick:" destination="HLe-Ia-uIv" eventType="touchUpInside" id="Mwp-jn-km2"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bV0-j5-H14" customClass="AddButton" customModule="PrimeSDK" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="-1" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="Jg8-Kq-R7J"/>
+                                <constraint firstAttribute="width" constant="28" id="xQY-el-JSs"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onAddButtonClick:" destination="HLe-Ia-uIv" eventType="touchUpInside" id="tcp-bl-aC9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="582-JD-DT7"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="n2x-iO-Xoq" firstAttribute="leading" secondItem="582-JD-DT7" secondAttribute="leading" constant="10" id="0h3-HU-Idl"/>
+                <constraint firstItem="io5-tK-ONh" firstAttribute="trailing" secondItem="582-JD-DT7" secondAttribute="trailing" constant="-12" id="781-fU-syn"/>
+                <constraint firstItem="hTK-m4-ZUF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fnp-Dv-fMZ" secondAttribute="bottom" constant="8" id="Bh5-OQ-mjr"/>
+                <constraint firstItem="582-JD-DT7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fnp-Dv-fMZ" secondAttribute="trailing" constant="10" id="DiT-XX-OsK"/>
+                <constraint firstItem="582-JD-DT7" firstAttribute="bottom" secondItem="n2x-iO-Xoq" secondAttribute="bottom" constant="10" id="EAa-Fe-6PJ"/>
+                <constraint firstItem="fnp-Dv-fMZ" firstAttribute="leading" secondItem="582-JD-DT7" secondAttribute="leading" constant="7" id="Hnq-oX-KNT"/>
+                <constraint firstItem="io5-tK-ONh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="n2x-iO-Xoq" secondAttribute="trailing" constant="20" id="IKY-LS-Cud"/>
+                <constraint firstItem="n2x-iO-Xoq" firstAttribute="top" secondItem="hTK-m4-ZUF" secondAttribute="bottom" constant="3" id="Tf5-fA-P0p"/>
+                <constraint firstItem="hTK-m4-ZUF" firstAttribute="leading" secondItem="582-JD-DT7" secondAttribute="leading" constant="10" id="ea2-D4-Uht"/>
+                <constraint firstItem="fnp-Dv-fMZ" firstAttribute="top" secondItem="582-JD-DT7" secondAttribute="top" constant="7" id="t3l-Wk-Nu4"/>
+                <constraint firstAttribute="bottom" secondItem="io5-tK-ONh" secondAttribute="bottom" constant="10" id="tdU-kY-MOc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addButton" destination="bV0-j5-H14" id="O15-hR-J5L"/>
+                <outlet property="blurView" destination="fnp-Dv-fMZ" id="1Fi-M0-dOy"/>
+                <outlet property="leftTopLabel" destination="s6Y-aR-lyo" id="Nxq-No-be7"/>
+                <outlet property="shareButton" destination="HFq-RD-gCL" id="4E0-4L-Sju"/>
+                <outlet property="subtitleLabel" destination="n2x-iO-Xoq" id="xjm-7F-zie"/>
+                <outlet property="titleLabel" destination="hTK-m4-ZUF" id="KpY-ki-iZG"/>
+            </connections>
+            <point key="canvasLocation" x="32.799999999999997" y="52.623688155922046"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="s6Y-aR-lyo">
+            <size key="intrinsicContentSize" width="36.5" height="14.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="share" width="18" height="25"/>
+    </resources>
+</document>

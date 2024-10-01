@@ -1,0 +1,56 @@
+/* 
+  Localizable.strings
+  PrimeSDK
+
+  Created by Ostrenkiy on 17/12/2019.
+  Copyright © 2019 Anton Kondrashov. All rights reserved.
+*/
+Clear = "Clear";
+Apply = "Apply";
+SearchStartState = "Start typing to see search results";
+SearchEmptyState = "We didn't find anything available based on your search.:(\nTry to change search options“";
+KinohodBookerFirstDateTomorrowButtonTitle = "View showtimes for tomorrow";
+KinohodBookerNoSeancesTodayEmptyStateText = "No showtimes available for today.\n View options for other dates 😉";
+KinohodBookerFirstDateOtherDateButtonTitle = "View showtimes for";
+KinohodBookerNoSeancesThisDayEmptyStateText = "No showtimes available for the selected date.\n View options for";
+KinohodBookerEmptyCalendarMovie = "Unfortunately, there is no schedule, Сheck out other films here";
+KinohodBookerEmptyCalendarCinema = "The cinema will soon share\nthe schedule with us 🧘🏻‍♂️";
+KinohodBookerAlertTitle = "Thank you\nfor your interest.\nWe will remind the cinema\nin the near future!";
+KinohodBookerAlertButton = "OK";
+KinohodBookerRemindCinema = "Remind cinema";
+All = "All";
+LikedCount = "liked";
+ShareWithFriends = "Share with friends?";
+ScheduleAndTickets = "Schedule and tickets";
+From = "from";
+Directors = "Directors";
+Producers = "Producers";
+Actors = "Actors";
+Premiere = "Premiere";
+PremiereInRussia = "Upcoming releases for Russia";
+FromC = "from";
+LiveVideoStatus = "Live";
+UpcomingVideoStatus = "Upcoming";
+AboutMovie = "About";
+SearchNotFound = "Unfortunately, nothing was found for this query";
+Retry = "Retry";
+BookingCancelAlertTitle = "Booking Cancellation";
+BookingCancelAlertMessage = "Are you sure you want to cancel your booking?";
+BookingCancelLateAlertMessage = "Your booking is in less than 2h. You may be charged a late cancellation fee of $35/person if you have made a table reservation at the club.\nDo you want to continue?";
+CancellationPolicyButtonTitle = "View cancellation policy";
+DateAndTime = "Date & Time";
+ReservationOptions = "Reservation options";
+Notes = "Notes";
+NotNow = "Not now";
+Cancel = "Cancel";
+BookingNumber = "Booking №";
+BookingSuggestionTitle = "is currently unable to accommodate your booking. They have suggested an alternative option for you:";
+NewConditions = "New conditions";
+Guests056789 = "Guests";
+Guests1 = "Guest";
+Guests234 = "Guests";
+BookingODPInfo = "We're sorry! This club currently doesn't offer any day passes";
+GoToProfile = "Go to profile";
+ProfileFullfillmentAlert = "Looks like you haven't completed your profile yet! To ensure you get the best experience when checking in at one of our clubs, please complete your profile\nGoals: \nPlease add information about you";
+BookingCanceled = "Canceled";
+BackToClubs = "Back to clubs";

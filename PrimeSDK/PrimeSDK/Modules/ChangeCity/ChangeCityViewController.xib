@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeCityViewController" customModule="PrimeSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="searchBar" destination="VX4-b7-77G" id="eE3-0o-cYo"/>
+                <outlet property="tableView" destination="6ph-C5-Bzy" id="M1d-d5-0fy"/>
+                <outlet property="titleLabel" destination="iro-mc-dEY" id="Qf7-6m-pkj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQc-b2-3nE">
+                    <rect key="frame" x="189" y="54" width="36" height="4"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="jQ2-OR-JNN"/>
+                        <constraint firstAttribute="height" constant="4" id="nCO-nK-nft"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сменить город" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iro-mc-dEY">
+                    <rect key="frame" x="15" y="68" width="384" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="UOi-Py-Dae"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Название города" translatesAutoresizingMaskIntoConstraints="NO" id="VX4-b7-77G">
+                    <rect key="frame" x="5" y="102" width="404" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="6ph-C5-Bzy">
+                    <rect key="frame" x="0.0" y="158" width="414" height="704"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6ph-C5-Bzy" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="4RE-fJ-gqC"/>
+                <constraint firstItem="iro-mc-dEY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="95L-RD-zXn"/>
+                <constraint firstItem="BQc-b2-3nE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="AWT-rk-igX"/>
+                <constraint firstItem="BQc-b2-3nE" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="AYb-AM-6t4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VX4-b7-77G" secondAttribute="trailing" constant="5" id="K90-qE-yee"/>
+                <constraint firstItem="iro-mc-dEY" firstAttribute="top" secondItem="BQc-b2-3nE" secondAttribute="bottom" constant="10" id="NsO-Qs-DJ2"/>
+                <constraint firstItem="6ph-C5-Bzy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SI8-Pv-08I"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6ph-C5-Bzy" secondAttribute="trailing" id="Ven-hh-7XC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iro-mc-dEY" secondAttribute="trailing" constant="15" id="X83-jU-Vd7"/>
+                <constraint firstItem="VX4-b7-77G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="YFh-i0-Tht"/>
+                <constraint firstItem="6ph-C5-Bzy" firstAttribute="top" secondItem="VX4-b7-77G" secondAttribute="bottom" id="vCG-BC-3Ij"/>
+                <constraint firstItem="VX4-b7-77G" firstAttribute="top" secondItem="iro-mc-dEY" secondAttribute="bottom" constant="4" id="wah-qN-rRF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
+        </view>
+    </objects>
+</document>

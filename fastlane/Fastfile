@@ -1,0 +1,15 @@
+remote_fastfile = ENV["FASTLANE_REMOTE_FASTFILE_REPO"]
+UI.user_error!("Provide repo with shared fastfile") if remote_fastfile.nil?
+
+import_from_git(url: remote_fastfile)
+
+$schemes = {
+    "Moscow Seasons" => ["Moscow Seasons"],
+    "Moscow Seasons TEST" => ["Moscow Seasons TEST"],
+    "Armenia Guide" => ["Armenia Guide"],
+    "Marche Guide" => ["Marche Guide"],
+    "Marche Guide TEST" => ["Marche Guide TEST"],
+    "Tretyakov" => ["Tretyakov"],
+    "Planetarium" => ["Planetarium"],
+    "AppBuilderSDK" => ["AppBuilderSDK"]
+}

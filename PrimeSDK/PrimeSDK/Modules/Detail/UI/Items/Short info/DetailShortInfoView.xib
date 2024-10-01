@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DetailShortInfoView" customModule="PrimeSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="39"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHh-Qd-tYR">
+                    <rect key="frame" x="34" y="10" width="32.5" height="14"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="3+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZX-SF-QIt" customClass="PaddingLabel" customModule="PrimeSDK" customModuleProvider="target">
+                    <rect key="frame" x="15" y="10" width="14" height="14"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                            <real key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                            <real key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QHh-Qd-tYR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" priority="250" constant="15" id="2yo-Kf-3qU"/>
+                <constraint firstItem="QHh-Qd-tYR" firstAttribute="bottom" secondItem="QZX-SF-QIt" secondAttribute="bottom" id="AkD-HC-g5z"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="QHh-Qd-tYR" secondAttribute="bottom" constant="15" id="Oag-eI-U1B"/>
+                <constraint firstItem="QHh-Qd-tYR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="SRh-fc-Cau"/>
+                <constraint firstItem="QZX-SF-QIt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="WO5-3K-iwf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QHh-Qd-tYR" secondAttribute="trailing" constant="10" id="YxR-mn-UP3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QHh-Qd-tYR" secondAttribute="trailing" id="ciI-dN-zca"/>
+                <constraint firstItem="QZX-SF-QIt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="g9u-c1-BdB"/>
+                <constraint firstItem="QHh-Qd-tYR" firstAttribute="leading" secondItem="QZX-SF-QIt" secondAttribute="trailing" priority="750" constant="5" id="l8R-9S-kV3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="ageLabel" destination="QZX-SF-QIt" id="tQL-bH-1AP"/>
+                <outlet property="bottomSubtitleConstraint" destination="Oag-eI-U1B" id="wzt-9E-BMN"/>
+                <outlet property="subtitleConstraintToSafeArea" destination="2yo-Kf-3qU" id="Buv-1n-fUG"/>
+                <outlet property="subtitleConstraintToSmallLabel" destination="l8R-9S-kV3" id="O0r-a5-aMd"/>
+                <outlet property="subtitleLabel" destination="QHh-Qd-tYR" id="HVf-Nz-NjM"/>
+            </connections>
+            <point key="canvasLocation" x="32.799999999999997" y="-257.72113943028489"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="QZX-SF-QIt">
+            <size key="intrinsicContentSize" width="14" height="12"/>
+        </designable>
+    </designables>
+</document>

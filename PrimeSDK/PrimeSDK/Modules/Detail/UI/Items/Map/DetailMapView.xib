@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DetailMapView" customModule="PrimeSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="326"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Y6-Kc-fCK">
+                    <rect key="frame" x="15" y="165.5" width="345" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ml-Ng-OAS">
+                    <rect key="frame" x="15" y="149" width="345" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jvs-7X-Ptk" customClass="BaseTileView" customModule="PrimeSDK" customModuleProvider="target">
+                    <rect key="frame" x="15" y="15" width="345" height="120"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="Y3B-nk-S81"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hG-Es-Agw">
+                    <rect key="frame" x="15" y="168.5" width="8" height="8"/>
+                    <color key="backgroundColor" red="0.30980392159999998" green="0.68235294120000001" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="8" id="JXZ-Wd-AFf"/>
+                        <constraint firstAttribute="height" constant="8" id="zGr-wo-EbW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0Ml-Ng-OAS" secondAttribute="trailing" constant="15" id="73Y-th-E7T"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8Y6-Kc-fCK" secondAttribute="bottom" constant="2" id="CVw-3o-NuR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Jvs-7X-Ptk" secondAttribute="trailing" constant="15" id="EHi-i8-mP6"/>
+                <constraint firstItem="Jvs-7X-Ptk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="S1B-U9-qPd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8Y6-Kc-fCK" secondAttribute="trailing" constant="15" id="Tik-1G-6OJ"/>
+                <constraint firstItem="3hG-Es-Agw" firstAttribute="top" secondItem="0Ml-Ng-OAS" secondAttribute="bottom" constant="5" id="WLS-Ax-ydU"/>
+                <constraint firstItem="3hG-Es-Agw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="bC1-bl-ica"/>
+                <constraint firstItem="Jvs-7X-Ptk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="ex6-sx-zRS"/>
+                <constraint firstItem="8Y6-Kc-fCK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="fMv-Db-ZXc"/>
+                <constraint firstItem="0Ml-Ng-OAS" firstAttribute="top" secondItem="Jvs-7X-Ptk" secondAttribute="bottom" constant="14" id="jGA-g3-eoD"/>
+                <constraint firstItem="0Ml-Ng-OAS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="tEf-Tn-Nmj"/>
+                <constraint firstItem="8Y6-Kc-fCK" firstAttribute="top" secondItem="0Ml-Ng-OAS" secondAttribute="bottom" constant="2" id="tiR-iE-v9K"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="mainLabel" destination="0Ml-Ng-OAS" id="Shm-lB-MMo"/>
+                <outlet property="roundedMarker" destination="3hG-Es-Agw" id="I3r-CT-Y7X"/>
+                <outlet property="secondaryLabel" destination="8Y6-Kc-fCK" id="Nh5-fj-sUQ"/>
+                <outlet property="tileView" destination="Jvs-7X-Ptk" id="gaP-JP-JY0"/>
+            </connections>
+            <point key="canvasLocation" x="34.399999999999999" y="-191.6041979010495"/>
+        </view>
+    </objects>
+</document>

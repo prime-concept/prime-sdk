@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5Gd-b2-Nna" customClass="CinemaHeaderSkeletonView" customModule="PrimeSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="118"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnU-be-D8N">
+                    <rect key="frame" x="15" y="8" width="115" height="12"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="115" id="o7p-6R-A6N"/>
+                        <constraint firstAttribute="height" constant="12" id="vC5-Q5-VQf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghb-hB-hMT">
+                    <rect key="frame" x="15" y="30" width="250" height="20"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="0pw-zb-8dX"/>
+                        <constraint firstAttribute="height" constant="20" id="R7C-V6-9Uh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdm-ti-mNr">
+                    <rect key="frame" x="15" y="58" width="135" height="20"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="9pC-hT-y3o"/>
+                        <constraint firstAttribute="width" constant="135" id="Vjm-Mx-y6S"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fye-oX-q52">
+                    <rect key="frame" x="15" y="90" width="116" height="18"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="116" id="477-gG-ghX"/>
+                        <constraint firstAttribute="height" constant="18" id="lzl-xW-WYe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIG-4R-qCm">
+                    <rect key="frame" x="136" y="90" width="37" height="18"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="U6M-iH-NXS"/>
+                        <constraint firstAttribute="width" constant="37" id="hSF-fy-gD6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uy-xO-aH8">
+                    <rect key="frame" x="328" y="0.0" width="32" height="32"/>
+                    <color key="backgroundColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="hDE-HF-UsD"/>
+                        <constraint firstAttribute="height" constant="32" id="nUy-Ls-IIa"/>
+                    </constraints>
+                    <state key="normal" image="detail-skeleton-close">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="bMP-FA-BVc" firstAttribute="bottom" secondItem="Fye-oX-q52" secondAttribute="bottom" constant="10" id="26u-Dt-Jms"/>
+                <constraint firstItem="Ghb-hB-hMT" firstAttribute="leading" secondItem="bMP-FA-BVc" secondAttribute="leading" constant="15" id="2xm-6u-R3I"/>
+                <constraint firstItem="DIG-4R-qCm" firstAttribute="centerY" secondItem="Fye-oX-q52" secondAttribute="centerY" id="69u-mr-TYG"/>
+                <constraint firstItem="Fye-oX-q52" firstAttribute="leading" secondItem="bMP-FA-BVc" secondAttribute="leading" constant="15" id="JsE-T2-7XY"/>
+                <constraint firstItem="Ghb-hB-hMT" firstAttribute="top" secondItem="bnU-be-D8N" secondAttribute="bottom" constant="10" id="K8z-Le-TkV"/>
+                <constraint firstItem="bnU-be-D8N" firstAttribute="top" secondItem="bMP-FA-BVc" secondAttribute="top" constant="8" id="Pbr-cP-r9B"/>
+                <constraint firstItem="qdm-ti-mNr" firstAttribute="leading" secondItem="bMP-FA-BVc" secondAttribute="leading" constant="15" id="WLK-Jm-UZM"/>
+                <constraint firstItem="6Uy-xO-aH8" firstAttribute="top" secondItem="bMP-FA-BVc" secondAttribute="top" id="ZfH-Om-Voo"/>
+                <constraint firstItem="Fye-oX-q52" firstAttribute="top" secondItem="qdm-ti-mNr" secondAttribute="bottom" constant="12" id="foi-N5-q1n"/>
+                <constraint firstItem="bMP-FA-BVc" firstAttribute="trailing" secondItem="6Uy-xO-aH8" secondAttribute="trailing" constant="15" id="hFL-eL-0Yo"/>
+                <constraint firstItem="bnU-be-D8N" firstAttribute="leading" secondItem="bMP-FA-BVc" secondAttribute="leading" constant="15" id="kxz-cb-DgN"/>
+                <constraint firstItem="DIG-4R-qCm" firstAttribute="leading" secondItem="Fye-oX-q52" secondAttribute="trailing" constant="5" id="l8N-U7-W7H"/>
+                <constraint firstItem="qdm-ti-mNr" firstAttribute="top" secondItem="Ghb-hB-hMT" secondAttribute="bottom" constant="8" id="vg9-ei-TRa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="bMP-FA-BVc"/>
+            <connections>
+                <outlet property="closeButton" destination="6Uy-xO-aH8" id="PLm-gS-W8g"/>
+            </connections>
+            <point key="canvasLocation" x="-12" y="217.69115442278863"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="detail-skeleton-close" width="15" height="15"/>
+    </resources>
+</document>

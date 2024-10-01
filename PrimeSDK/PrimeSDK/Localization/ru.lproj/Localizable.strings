@@ -1,0 +1,51 @@
+/* 
+  Localizable.strings
+  PrimeSDK
+
+  Created by Ostrenkiy on 17/12/2019.
+  Copyright © 2019 Anton Kondrashov. All rights reserved.
+*/
+Clear = "Очистить";
+Apply = "Применить";
+SearchStartState = "Начните печатать, чтобы увидеть результаты поиска";
+SearchEmptyState = "Мы ничего не нашли :(\nПопрбуйте изменить параметры поиска";
+KinohodBookerFirstDateTomorrowButtonTitle = "Посмотреть сеансы на завтра";
+KinohodBookerNoSeancesTodayEmptyStateText = "На сегодня сеансов нет.\nПосмотрите другие дни 😉";
+KinohodBookerFirstDateOtherDateButtonTitle = "Посмотреть на";
+KinohodBookerNoSeancesThisDayEmptyStateText = "На этот день сеансов нет.\nПосмотрите на";
+KinohodBookerEmptyCalendarMovie = "К сожалению, расписание отсутствует, рекомендуем посмотреть другие фильмы";
+KinohodBookerEmptyCalendarCinema = "Скоро кинотеатр поделится\nс нами расписанием 🧘🏻‍♂️";
+KinohodBookerAlertTitle = "Благодарим вас\nза проявленный интерес.\nМы напомним кинотеатру\nв ближайшее время!";
+KinohodBookerAlertButton = "Хорошо";
+KinohodBookerRemindCinema = "Напомнить кинотеатру";
+All = "Все";
+LikedCount = "нравится";
+ShareWithFriends = "Поделиться с друзьями?";
+ScheduleAndTickets = "Расписание и билеты";
+From = "от";
+Directors = "Режиссеры";
+Actors = "Актеры";
+Producers = "Продюсеры";
+Premiere = "Премьера";
+PremiereInRussia = "Премьера в России";
+FromC = "с";
+LiveVideoStatus = "Прямой эфир";
+UpcomingVideoStatus = "Ждет начала";
+AboutMovie = "О фильме";
+SearchNotFound = "К сожалению, по данному запросу ничего не найдено";
+Retry = "Повторить";
+BookingCancelAlertTitle = "Booking Cancellation";
+BookingCancelAlertMessage = "Are you sure you want to cancel your booking?";
+CancellationPolicyButtonTitle = "View cancellation policy";
+DateAndTime = "Date & Time";
+ReservationOptions = "Reservation options";
+Notes = "Notes";
+NotNow = "Not now";
+Cancel = "Cancel";
+BookingNumber = "Booking №";
+BookingSuggestionTitle = "is currently unable to accommodate your booking. They have suggested an alternative option for you:";
+NewConditions = "New conditions";
+Guests056789 = "Guests";
+Guests1 = "Guest";
+Guests234 = "Guests";
+BookingODPInfo = "We're sorry! This club currently doesn't offer any day passes";

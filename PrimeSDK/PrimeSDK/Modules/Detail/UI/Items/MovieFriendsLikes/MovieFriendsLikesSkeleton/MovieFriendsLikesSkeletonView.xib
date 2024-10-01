@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="A03-8p-Jfz" customClass="MovieFriendsLikesSkeletonView" customModule="PrimeSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="397" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TDl-nJ-8Rm">
+                    <rect key="frame" x="65" y="11" width="32" height="32"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="4Yx-H7-OAY"/>
+                        <constraint firstAttribute="height" constant="32" id="9dh-WR-Hhn"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Bf-zR-wKJ">
+                    <rect key="frame" x="40" y="11" width="32" height="32"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="REG-uU-cLW"/>
+                        <constraint firstAttribute="width" constant="32" id="kpm-Hv-ykA"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nl6-rv-4xJ">
+                    <rect key="frame" x="15" y="11" width="32" height="32"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="Cgr-VN-27N"/>
+                        <constraint firstAttribute="height" constant="32" id="kLP-oO-XVd"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8V-25-omT">
+                    <rect key="frame" x="102" y="18.5" width="107" height="17"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="obI-TG-uNS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Mu-ym-Kct">
+                    <rect key="frame" x="348" y="10" width="34" height="34"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="KHb-Nd-PhC"/>
+                        <constraint firstAttribute="width" constant="34" id="Mta-fk-bL0"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olE-CZ-9My">
+                    <rect key="frame" x="309" y="10" width="34" height="34"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="34" id="ymg-LL-r9u"/>
+                        <constraint firstAttribute="height" constant="34" id="zEi-RE-fYt"/>
+                    </constraints>
+                    <state key="selected" image="movie-favorite-detail-on"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="olE-CZ-9My" firstAttribute="leading" secondItem="Q8V-25-omT" secondAttribute="trailing" constant="100" id="0mo-QA-4KA"/>
+                <constraint firstItem="SdB-pO-ffU" firstAttribute="trailing" secondItem="3Mu-ym-Kct" secondAttribute="trailing" constant="15" id="3ne-FL-ewp"/>
+                <constraint firstItem="nl6-rv-4xJ" firstAttribute="centerY" secondItem="olE-CZ-9My" secondAttribute="centerY" id="5Ol-GC-DQS"/>
+                <constraint firstItem="6Bf-zR-wKJ" firstAttribute="centerY" secondItem="olE-CZ-9My" secondAttribute="centerY" id="CJD-9o-qn9"/>
+                <constraint firstAttribute="bottom" secondItem="olE-CZ-9My" secondAttribute="bottom" priority="999" constant="7" id="JyV-Fe-trP"/>
+                <constraint firstItem="3Mu-ym-Kct" firstAttribute="leading" secondItem="olE-CZ-9My" secondAttribute="trailing" constant="5" id="MAq-5R-mMd"/>
+                <constraint firstItem="olE-CZ-9My" firstAttribute="top" secondItem="A03-8p-Jfz" secondAttribute="top" constant="10" id="Qad-7Z-qHP"/>
+                <constraint firstItem="6Bf-zR-wKJ" firstAttribute="leading" secondItem="nl6-rv-4xJ" secondAttribute="trailing" constant="-7" id="TC1-NS-XsQ"/>
+                <constraint firstItem="TDl-nJ-8Rm" firstAttribute="leading" secondItem="6Bf-zR-wKJ" secondAttribute="trailing" constant="-7" id="Uf4-Bs-49h"/>
+                <constraint firstItem="3Mu-ym-Kct" firstAttribute="centerY" secondItem="olE-CZ-9My" secondAttribute="centerY" id="dtd-VG-SXw"/>
+                <constraint firstItem="nl6-rv-4xJ" firstAttribute="leading" secondItem="SdB-pO-ffU" secondAttribute="leading" constant="15" id="oRG-TV-0xu"/>
+                <constraint firstItem="Q8V-25-omT" firstAttribute="leading" secondItem="SdB-pO-ffU" secondAttribute="leading" constant="102" id="qLT-Gk-5ag"/>
+                <constraint firstItem="Q8V-25-omT" firstAttribute="centerY" secondItem="olE-CZ-9My" secondAttribute="centerY" id="x5M-lB-JJV"/>
+                <constraint firstItem="TDl-nJ-8Rm" firstAttribute="centerY" secondItem="olE-CZ-9My" secondAttribute="centerY" id="xF1-2D-xZh"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="SdB-pO-ffU"/>
+            <point key="canvasLocation" x="92.028985507246389" y="-165.40178571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="movie-favorite-detail-on" width="30" height="34"/>
+    </resources>
+</document>

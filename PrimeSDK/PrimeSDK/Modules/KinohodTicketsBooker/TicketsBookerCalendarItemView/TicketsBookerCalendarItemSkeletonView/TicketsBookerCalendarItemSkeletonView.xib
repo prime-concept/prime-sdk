@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="kTa-qr-Qnq" customClass="TicketsBookerCalendarItemSkeletonView" customModule="PrimeSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="91" height="77"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmt-dt-g3J">
+                    <rect key="frame" x="13" y="7" width="65" height="10"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="6s0-ze-MVs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2D-uV-NRq">
+                    <rect key="frame" x="11" y="24" width="69" height="30"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="999" constant="16" id="UKj-vM-lDs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Og-xb-X7P">
+                    <rect key="frame" x="11" y="61" width="69" height="10"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="4vK-Tm-cFf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="90X-bU-zFk" firstAttribute="trailing" secondItem="r2D-uV-NRq" secondAttribute="trailing" constant="11" id="4Qm-1Y-gMa"/>
+                <constraint firstAttribute="bottom" secondItem="4Og-xb-X7P" secondAttribute="bottom" constant="6" id="5Vw-0i-bGX"/>
+                <constraint firstItem="4Og-xb-X7P" firstAttribute="leading" secondItem="90X-bU-zFk" secondAttribute="leading" constant="11" id="7E2-GC-hRo"/>
+                <constraint firstItem="r2D-uV-NRq" firstAttribute="leading" secondItem="90X-bU-zFk" secondAttribute="leading" constant="11" id="G2a-3z-afj"/>
+                <constraint firstItem="Qmt-dt-g3J" firstAttribute="leading" secondItem="90X-bU-zFk" secondAttribute="leading" constant="13" id="Ho4-jX-1Ap"/>
+                <constraint firstItem="Qmt-dt-g3J" firstAttribute="top" secondItem="kTa-qr-Qnq" secondAttribute="top" constant="7" id="Is9-YH-5Ri"/>
+                <constraint firstItem="90X-bU-zFk" firstAttribute="trailing" secondItem="4Og-xb-X7P" secondAttribute="trailing" constant="11" id="QKT-V1-CT3"/>
+                <constraint firstItem="r2D-uV-NRq" firstAttribute="top" secondItem="Qmt-dt-g3J" secondAttribute="bottom" constant="7" id="YvM-xt-DqZ"/>
+                <constraint firstItem="90X-bU-zFk" firstAttribute="trailing" secondItem="Qmt-dt-g3J" secondAttribute="trailing" constant="13" id="clj-Az-Xnf"/>
+                <constraint firstItem="4Og-xb-X7P" firstAttribute="top" secondItem="r2D-uV-NRq" secondAttribute="bottom" constant="7" id="uSP-1p-vcG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="90X-bU-zFk"/>
+            <connections>
+                <outlet property="bottomLabel" destination="4Og-xb-X7P" id="oH0-8a-nTu"/>
+                <outlet property="mainLabel" destination="r2D-uV-NRq" id="lpU-Ic-GM6"/>
+                <outlet property="topLabel" destination="Qmt-dt-g3J" id="dlZ-EF-A75"/>
+            </connections>
+            <point key="canvasLocation" x="110.86956521739131" y="106.80803571428571"/>
+        </view>
+    </objects>
+</document>

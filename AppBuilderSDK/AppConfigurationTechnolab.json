@@ -1,0 +1,928 @@
+{
+    "views": [
+        {
+            "type": "home-vertical-container",
+            "name": "home-vertical-container",
+            "header": "home-header-image",
+            "subviews": ["titled-horizontal-list-premiere", "ad-banner-view", "titled-horizontal-list-soon", "titled-horizontal-list-soon"],
+            "attributes": {
+                "inset": 250
+            }
+        },
+        {
+            "type": "home-header-image",
+            "name": "home-header-image",
+            "attributes": {
+                "path": "https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/D3KMvvFU0AADLaj.jpg",
+                "height": 750,
+                "gradient_height": 200
+            }
+        },
+        {
+            "type": "titled-horizontal-list",
+            "name": "titled-horizontal-list-premiere",
+            "subviews": ["flat-movie-card"],
+            "attributes": {
+                "item_width": 135,
+                "item_height": 223,
+                "spacing": 6,
+                "show_title": false
+            },
+            "actions": {
+                "load": "load-premiere-list",
+                "tap_all": "show-premiere-all"
+            }
+        },
+        {
+            "type": "titled-horizontal-list",
+            "name": "titled-horizontal-list-soon",
+            "subviews": ["flat-movie-card"],
+            "attributes": {
+                "item_width": 135,
+                "item_height": 223,
+                "spacing": 6,
+                "title": "Скоро",
+                "show_title": true
+            },
+            "actions": {
+                "load": "load-soon-horizontal-list",
+                "tap_all": "show-soon-all"
+            }
+        },
+        {
+            "type": "flat-movie-card",
+            "name": "flat-movie-card",
+            "attributes": {},
+            "actions": {
+                "tap": "tap-movie-card-open-detail"
+            }
+        },
+        {
+            "type": "ad-banner-view",
+            "name": "ad-banner-view",
+            "attributes": {
+                "block_id": "R-M-187883-1",
+                "parameters": {
+                    "adf_ownerid": "270901",
+                    "adf_p1": "cabog",
+                    "adf_p2": "fksh",
+                    "adf_pt": "b"
+                }
+            }
+        },
+        {
+            "type": "change-city",
+            "name": "change-city",
+            "attributes": {
+                "title": "Сменить город",
+                "here_title": "Вы здесь",
+                "search_results_title": "Результаты поиска для"
+            },
+            "actions": {
+                "load": "load-cities-list"
+            }
+        },
+        {
+            "type": "list",
+            "name": "soon-movies-filter-list",
+            "supported_cells" : ["movie-now-card"],
+            "attributes": {
+                "support_auto_item_height": false,
+                "support_pagination": true,
+                "allow_location": false,
+                "allow_pull_to_refresh": false,
+                "item_height": 140
+            },
+            "actions": {
+                "load": "load-soon-movies-page"
+            }
+        },
+        {
+            "type": "movie-now-card",
+            "name": "movie-now-card",
+            "attributes": {
+                "title_color": "#000000"
+            },
+            "actions": {
+                "tap": "tap-movie-card-open-detail",
+                "toggle_favorite": "toggle-movie-favorite"
+            }
+        },
+        {
+            "type": "detail-container",
+            "name": "movie-detail",
+            "header": "movie-video-header",
+            "attributes": {
+                "is_favorite_enabled": false,
+                "is_bottom_button_enabled": false,
+                "bottom_button_title": "Купить билеты",
+                "allow_location": false,
+                "ticket_purchase_module": "movie-tickets-booker",
+                "ticket_purchase_module_source": "movie",
+                "ticket_purchase_module_show_button": true
+            },
+            "subviews": ["movie-friends-likes", "movie-info"],
+            "actions": {
+                "load": "load-movie-detail"
+            }
+        },
+        {
+            "type": "movie-friends-likes",
+            "name": "movie-friends-likes",
+            "attributes": {},
+            "actions": {
+                "load": "load-movie-friends",
+                "toggle_favorite": "toggle-movie-favorite",
+                "share": ""
+            }
+        },
+        {
+            "type": "detail-info",
+            "name": "movie-info",
+            "attributes": {
+                "title": "О фильме",
+                "show_title": true
+            }
+        },
+        {
+            "type": "detail-movie-video-header",
+            "name": "movie-video-header",
+            "attributes": {
+            }
+        },
+        {
+            "type": "kinohod-tickets-booker",
+            "name": "movie-tickets-booker",
+            "ads": [
+                {
+                    "name": "ad-banner-view",
+                    "position": 1
+                },
+                {
+                    "name": "ad-banner-view",
+                    "position": 3
+                }
+            ],
+            "attributes": {
+                "button_title": "Расписание и билеты",
+                "no_data_text": "На эту дату нет сеансов",
+                "cinema": "cinema-card",
+                "support_pagination": false
+            },
+            "actions": {
+                "load_calendar": "load-movie-calendar",
+                "load": "load-movie-schedule"
+            }
+        },
+        {
+            "type": "list",
+            "name": "cinema-list",
+            "supported_cells" : ["cinema-card"],
+            "attributes": {
+                "support_auto_item_height": true,
+                "support_pagination": true,
+                "allow_location": true,
+                "allow_pull_to_refresh": true
+            },
+            "actions": {
+                "load": "load-cinemas-page"
+            }
+        },
+        {
+            "type": "cinema-card",
+            "name": "cinema-card",
+            "attributes": {
+                "title": "Cinema"
+            },
+            "actions": {
+                "tap": "tap-cinema",
+                "toggle_favorite": "toggle-cinema-favorite"
+            }
+        },
+        {
+            "type": "detail-container",
+            "name": "cinema-detail",
+            "header": "cinema-header",
+            "attributes": {
+                "is_favorite_enabled": false,
+                "is_bottom_button_enabled": false,
+                "bottom_button_title": "Купить билеты",
+                "allow_location": true,
+                "ticket_purchase_module": "cinema-tickets-booker",
+                "ticket_purchase_module_source": "cinema",
+                "ticket_purchase_module_show_button": false
+            },
+            "subviews": ["detail-cinema-address"],
+            "actions": {
+                "load": "load-cinema-detail"
+            }
+        },
+        {
+            "type": "kinohod-search",
+            "name": "kinohod-search",
+            "attributes": {
+                "cinema": "cinema-card",
+                "movie": "flat-movie-card"
+            },
+            "actions": {
+                "load": "search-query"
+            }
+        },
+        {
+            "type": "detail-cinema-header",
+            "name": "cinema-header",
+            "attributes": {
+            }
+        },
+        {
+            "type": "detail-cinema-address",
+            "name": "detail-cinema-address",
+            "attributes": {
+            }
+        },
+        {
+            "type": "kinohod-tickets-booker",
+            "name": "cinema-tickets-booker",
+            "ads": [
+                {
+                    "name": "ad-banner-view",
+                    "position": 1
+                },
+                {
+                    "name": "ad-banner-view",
+                    "position": 3
+                }
+            ],
+            "attributes": {
+                "button_title": "Расписание и билеты",
+                "no_data_text": "На эту дату нет сеансов",
+                "movie": "movie-now-card",
+                "support_pagination": false
+            },
+            "actions": {
+                "load_calendar": "load-cinema-calendar",
+                "load": "load-cinema-schedule"
+            }
+        }
+    ],
+    "actions": [
+        {
+            "name": "load-movie-calendar",
+            "type": "load",
+            "request": {
+                "url": "https://api.kinohod.ru/api/restful/v1/movies/{{sender.movie}}/schedules/calendar",
+                "headers":
+                {
+                    "Cookie": "kinohod_session=fce1cd18c453851c5a4c4688f17081f65c827948",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "type": "get",
+                "parameters":
+                {
+                    "city": "1",
+                    "apikey": "4106c187-4237-3ca8-885f-8820a202a944"
+                }
+            },
+            "response": {
+                "deserializer": "calendar-deserializer",
+                "deserializers": [
+                    {
+                        "name": "calendar-deserializer",
+                        "type": "object",
+                        "map": {
+                            "target": "movie-tickets-booker",
+                            "objects":
+                            {
+                                "calendar.{{iterator#0}}.date": "{{data.data.{{iterator#0}}.attributes.date}}",
+                                "calendar.{{iterator#0}}.count": "{{data.data.{{iterator#0}}.attributes.count}}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "load-movie-schedule",
+            "type": "load",
+            "request": {
+                "url": "https://api.kinohod.ru/api/restful/v1/movies/{{sender.movie}}/cinemas",
+                "headers":
+                {
+                    "Cookie": "kinohod_session=fce1cd18c453851c5a4c4688f17081f65c827948",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "type": "get",
+                "parameters":
+                {
+                    "city": "1",
+                    "apikey": "4106c187-4237-3ca8-885f-8820a202a944",
+                    "sort": "distance",
+                    "latitude": 55.705815599999994,
+                    "longitude": 37.476824,
+                    "relationships[]": "cinema.schedules",
+                    "limit": "{{action.limit}}",
+                    "rangeStart": "{{action.offset}}",
+                    "date": "{{action.date}}"
+                }
+            },
+            "response": {
+                "deserializer": "cinemas-deserializer",
+                "deserializers": [
+                    {
+                        "name": "cinemas-deserializer",
+                        "type": "object",
+                        "map": {
+                            "target": "movie-tickets-booker",
+                            "objects":
+                            {
+                                "schedule.{{iterator#0}}.cinema-card.id": "{{data.data.{{iterator#0}}.id}}",
+                                "schedule.{{iterator#0}}.cinema-card.title": "{{data.data.{{iterator#0}}.attributes.title}}",
+                                "schedule.{{iterator#0}}.cinema-card.mall": "{{data.data.{{iterator#0}}.attributes.mall}}",
+                                "schedule.{{iterator#0}}.cinema-card.address": "{{data.data.{{iterator#0}}.attributes.address}}",
+                                "schedule.{{iterator#0}}.cinema-card.subway.name": "{{data.data.{{iterator#0}}.attributes.subway.0.name}}",
+                                "schedule.{{iterator#0}}.cinema-card.subway.color": "{{data.data.{{iterator#0}}.attributes.subway.0.color}}",
+                                "schedule.{{iterator#0}}.cinema-card.is_favorite": "{{data.data.{{iterator#0}}.attributes.isFave}}",
+                                "schedule.{{iterator#0}}.schedules.{{iterator#1}}.id": "{{data.data.{{iterator#0}}.relationships.schedules.{{iterator#1}}.id}}",
+                                "schedule.{{iterator#0}}.schedules.{{iterator#1}}.start_time": "{{data.data.{{iterator#0}}.relationships.schedules.{{iterator#1}}.attributes.startTime}}",
+                                "schedule.{{iterator#0}}.schedules.{{iterator#1}}.min_price": "{{data.data.{{iterator#0}}.relationships.schedules.{{iterator#1}}.attributes.minPrice}}",
+                                "schedule.{{iterator#0}}.schedules.{{iterator#1}}.group.name": "{{data.data.{{iterator#0}}.relationships.schedules.{{iterator#1}}.attributes.group.name}}",
+                                "schedule.{{iterator#0}}.schedules.{{iterator#1}}.group.order": "{{data.data.{{iterator#0}}.relationships.schedules.{{iterator#1}}.attributes.group.order}}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "load-movie-friends",
+            "type": "load",
+            "request": {
+                "url": "https://api.kinohod.ru/api/rest/mobile/v5/movies/movie_friends/{{sender.id}}?clear_cache=1",
+                "headers":
+                {
+                    "Cookie": "kinohod_session=fce1cd18c453851c5a4c4688f17081f65c827948",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "type": "get",
+                "parameters":
+                {
+                    "city": "1",
+                    "apikey": "4106c187-4237-3ca8-885f-8820a202a944"
+                }
+            },
+            "response": {
+                "deserializer": "friends-deserializer",
+                "deserializers": [
+                    {
+                        "name": "friends-deserializer",
+                        "type": "object",
+                        "map": {
+                            "objects":
+                            {
+                                "visited_friends.{{iterator#0}}.image": "{{data.was_been.{{iterator#0}}.avatar}}",
+                                "want_visit_friends.{{iterator#0}}.image": "{{data.want_go.{{iterator#0}}.avatar}}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "load-cinema-calendar",
+            "type": "load",
+            "request": {
+                "url": "https://api.kinohod.ru/api/restful/v1/cinemas/{{sender.cinema}}/schedules/calendar",
+                "headers":
+                {
+                    "Cookie": "kinohod_session=fce1cd18c453851c5a4c4688f17081f65c827948",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "type": "get",
+                "parameters":
+                {
+                    "city": "1",
+                    "apikey": "4106c187-4237-3ca8-885f-8820a202a944"
+                }
+            },
+            "response": {
+                "deserializer": "calendar-deserializer",
+                "deserializers": [
+                    {
+                        "name": "calendar-deserializer",
+                        "type": "object",
+                        "map": {
+                            "target": "cinema-tickets-booker",
+                            "objects":
+                            {
+                                "calendar.{{iterator#0}}.date": "{{data.data.{{iterator#0}}.attributes.date}}",
+                                "calendar.{{iterator#0}}.count": "{{data.data.{{iterator#0}}.attributes.count}}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "load-cinema-schedule",
+            "type": "load",
+            "request": {
+                "url": "https://api.kinohod.ru/api/restful/v1/cinemas/{{sender.cinema}}/movies",
+                "headers":
+                {
+                    "Cookie": "kinohod_session=fce1cd18c453851c5a4c4688f17081f65c827948",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "type": "get",
+                "parameters":
+                {
+                    "city": "1",
+                    "apikey": "4106c187-4237-3ca8-885f-8820a202a944",
+                    "sort": "showcount",
+                    "attributes": "movie.all",
+                    "relationships[]": "movie.schedules",
+                    "date": "{{action.date}}"
+                }
+            },
+            "response": {
+                "deserializer": "cinemas-deserializer",
+                "deserializers": [
+                    {
+                        "name": "cinemas-deserializer",
+                        "type": "object",
+                        "map": {
+                            "target": "cinema-tickets-booker",
+                            "objects":
+                            {
+                                "schedule.{{iterator#0}}.movie-now-card.title": "{{data.data.{{iterator#0}}.attributes.title}}",
+                                "schedule.{{iterator#0}}.movie-now-card.id": "{{data.data.{{iterator#0}}.id}}",
+                                "schedule.{{iterator#0}}.movie-now-card.genres": "{{data.data.{{iterator#0}}.attributes.genres}}",
+                                "schedule.{{iterator#0}}.movie-now-card.image_path": "https://api.kinohod.ru/p/375x270/{{data.data.{{iterator#0}}.attributes.poster.crop}}",
+                                "schedule.{{iterator#0}}.movie-now-card.imdb_rating": "{{data.data.{{iterator#0}}.attributes.imdbRating}}",
+                                "schedule.{{iterator#0}}.movie-now-card.description_text": "{{data.data.{{iterator#0}}.attributes.annotationShort}}",
+                                "schedule.{{iterator#0}}.movie-now-card.is_fave": "{{data.data.{{iterator#0}}.attributes.isFave}}",
+                                "schedule.{{iterator#0}}.schedules.{{iterator#1}}.id": "{{data.data.{{iterator#0}}.relationships.schedules.{{iterator#1}}.id}}",
+                                "schedule.{{iterator#0}}.schedules.{{iterator#1}}.start_time": "{{data.data.{{iterator#0}}.relationships.schedules.{{iterator#1}}.attributes.startTime}}",
+                                "schedule.{{iterator#0}}.schedules.{{iterator#1}}.min_price": "{{data.data.{{iterator#0}}.relationships.schedules.{{iterator#1}}.attributes.minPrice}}",
+                                "schedule.{{iterator#0}}.schedules.{{iterator#1}}.group.name": "{{data.data.{{iterator#0}}.relationships.schedules.{{iterator#1}}.attributes.group.name}}",
+                                "schedule.{{iterator#0}}.schedules.{{iterator#1}}.group.order": "{{data.data.{{iterator#0}}.relationships.schedules.{{iterator#1}}.attributes.group.order}}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "load-soon-horizontal-list",
+            "type": "load",
+            "request": {
+                "url": "https://api.kinohod.ru/api/restful/v1/movies/soon",
+                "headers":
+                {
+                    "Cookie": "kinohod_session=fce1cd18c453851c5a4c4688f17081f65c827948",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "type": "get",
+                "parameters":
+                {
+                    "city": "1",
+                    "apikey": "4106c187-4237-3ca8-885f-8820a202a944",
+                    "sort" : "rating",
+                    "attributes": "movie.all",
+                    "rangeStart": "0",
+                    "limit": "20"
+                }
+            },
+            "response": {
+                "deserializer": "movies-named-list-deserializer",
+                "deserializers": [
+                    {
+                        "name": "movies-named-list-deserializer",
+                        "type": "object",
+                        "map": {
+                            "target": "titled-horizontal-list-soon",
+                            "objects":
+                            {
+                                "flat-movie-card.{{iterator#0}}.title": "{{data.data.{{iterator#0}}.attributes.title}}",
+                                "flat-movie-card.{{iterator#0}}.id": "{{data.data.{{iterator#0}}.id}}",
+                                "flat-movie-card.{{iterator#0}}.genres": "{{data.data.{{iterator#0}}.attributes.genres}}",
+                                "flat-movie-card.{{iterator#0}}.image_path": "https://api.kinohod.ru/p/570x405/{{data.data.{{iterator#0}}.attributes.poster.crop}}",
+                                "flat-movie-card.{{iterator#0}}.imdb_rating": "{{data.data.{{iterator#0}}.attributes.imdbRating}}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "show-soon-all",
+            "type": "open-module",
+            "module_parameters": {
+                "type": "list",
+                "name": "soon-movies-filter-list"
+            },
+            "transition_parameters": {
+                "transition_type": "card"
+            }
+        },
+        {
+            "name": "load-premiere-list",
+            "type": "load",
+            "request": {
+                "url": "https://api.kinohod.ru/api/restful/v1/movies/premiere",
+                "headers":
+                {
+                    "Cookie": "kinohod_session=fce1cd18c453851c5a4c4688f17081f65c827948",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "type": "get",
+                "parameters":
+                {
+                    "city": "1",
+                    "apikey": "4106c187-4237-3ca8-885f-8820a202a944",
+                    "sort" : "showcount",
+                    "attributes": "movie.all",
+                    "rangeStart": "0",
+                    "limit": "20"
+                }
+            },
+            "response": {
+                "deserializer": "movies-named-list-deserializer",
+                "deserializers": [
+                    {
+                        "name": "movies-named-list-deserializer",
+                        "type": "object",
+                        "map": {
+                            "target": "titled-horizontal-list-premiere",
+                            "objects":
+                            {
+                                "flat-movie-card.{{iterator#0}}.title": "{{data.data.{{iterator#0}}.attributes.title}}",
+                                "flat-movie-card.{{iterator#0}}.id": "{{data.data.{{iterator#0}}.id}}",
+                                "flat-movie-card.{{iterator#0}}.genres": "{{data.data.{{iterator#0}}.attributes.genres}}",
+                                "flat-movie-card.{{iterator#0}}.image_path": "https://api.kinohod.ru/p/570x405/{{data.data.{{iterator#0}}.attributes.poster.crop}}",
+                                "flat-movie-card.{{iterator#0}}.imdb_rating": "{{data.data.{{iterator#0}}.attributes.imdbRating}}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "load-cities-list",
+            "type": "load",
+            "request": {
+                "url": "https://api.kinohod.ru/api/restful/v1/cities",
+                "headers":
+                {
+                    "Cookie": "kinohod_session=fce1cd18c453851c5a4c4688f17081f65c827948",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "type": "get",
+                "parameters":
+                {
+                    "apikey": "4106c187-4237-3ca8-885f-8820a202a944",
+                    "attributes": "city.short"
+                }
+            },
+            "response": {
+                "deserializer": "cities-list-deserializer",
+                "deserializers": [
+                    {
+                        "name": "cities-list-deserializer",
+                        "type": "object",
+                        "map": {
+                            "target": "change-city",
+                            "objects":
+                            {
+                                "city.{{iterator#0}}.name": "{{data.data.{{iterator#0}}.attributes.name}}",
+                                "city.{{iterator#0}}.id": "{{data.data.{{iterator#0}}.id}}",
+                                "city.{{iterator#0}}.lat": "{{data.data.{{iterator#0}}.attributes.location.latitude}}",
+                                "city.{{iterator#0}}.lon": "{{data.data.{{iterator#0}}.attributes.location.longitude}}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "load-soon-movies-page",
+            "type": "load",
+            "request": {
+                "url": "https://api.kinohod.ru/api/restful/v1/movies/soon",
+                "headers":
+                {
+                    "Cookie": "kinohod_session=fce1cd18c453851c5a4c4688f17081f65c827948",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "type": "get",
+                "parameters":
+                {
+                    "city": "1",
+                    "apikey": "4106c187-4237-3ca8-885f-8820a202a944",
+                    "sort" : "showcount",
+                    "attributes": "movie.all",
+                    "limit": "{{action.limit}}",
+                    "rangeStart": "{{action.offset}}"
+                }
+            },
+            "response": {
+                "deserializer": "movies-named-list-deserializer-new",
+                "deserializers": [
+                    {
+                        "name": "movies-named-list-deserializer-new",
+                        "type": "object",
+                        "map": {
+                            "target": "soon-movies-filter-list",
+                            "objects":
+                            {
+                                "movie-now-card.{{iterator#0}}.title": "{{data.data.{{iterator#0}}.attributes.title}}",
+                                "movie-now-card.{{iterator#0}}.id": "{{data.data.{{iterator#0}}.id}}",
+                                "movie-now-card.{{iterator#0}}.genres": "{{data.data.{{iterator#0}}.attributes.genres}}",
+                                "movie-now-card.{{iterator#0}}.formats": "{{data.data.{{iterator#0}}.attributes.formats}}",
+                                "movie-now-card.{{iterator#0}}.image_path": "https://api.kinohod.ru/p/570x405/{{data.data.{{iterator#0}}.attributes.poster.crop}}",
+                                "movie-now-card.{{iterator#0}}.imdb_rating": "{{data.data.{{iterator#0}}.attributes.imdbRating}}",
+                                "movie-now-card.{{iterator#0}}.description_text": "{{data.data.{{iterator#0}}.attributes.annotationShort}}",
+                                "movie-now-card.{{iterator#0}}.is_fave": "{{data.data.{{iterator#0}}.attributes.isFave}}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "tap-movie-card-open-detail",
+            "type": "open-module",
+            "module_parameters": {
+                "type": "detail",
+                "name": "movie-detail",
+                "attributes.id": "{{sender.id}}"
+            },
+            "transition_parameters": {
+                "transition_type": "modal"
+            }
+        },
+        {
+            "name": "tap-cinema",
+            "type": "open-module",
+            "module_parameters": {
+                "type": "detail",
+                "name": "cinema-detail",
+                "attributes.id": "{{sender.id}}"
+            },
+            "transition_parameters": {
+                "transition_type": "modal"
+            }
+        },
+        {
+            "name": "load-cinemas-page",
+            "type": "load",
+            "request": {
+                "url": "https://api.kinohod.ru/api/restful/v1/cinemas",
+                "headers":
+                {
+                    "Cookie": "kinohod_session=fce1cd18c453851c5a4c4688f17081f65c827948",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "type": "get",
+                "parameters":
+                {
+                    "city": "1",
+                    "apikey": "4106c187-4237-3ca8-885f-8820a202a944",
+                    "latitude": "{{action.lat}}",
+                    "longitude": "{{action.lon}}",
+                    "sort" : "distance",
+                    "attributes": "cinema.short",
+                    "limit": "{{action.limit}}",
+                    "rangeStart": "{{action.offset}}"
+                }
+            },
+            "response": {
+                "deserializer": "cinema-deserializer",
+                "deserializers": [
+                    {
+                        "name": "cinema-deserializer",
+                        "type": "object",
+                        "map": {
+                            "target": "",
+                            "objects":
+                            {
+                                "cinema-card.{{iterator#0}}.title": "{{data.data.{{iterator#0}}.attributes.title}}",
+                                "cinema-card.{{iterator#0}}.badges": "{{data.data.{{iterator#0}}.attributes.labels}}",
+                                "cinema-card.{{iterator#0}}.id": "{{data.data.{{iterator#0}}.id}}",
+                                "cinema-card.{{iterator#0}}.mall": "{{data.data.{{iterator#0}}.attributes.mall}}",
+                                "cinema-card.{{iterator#0}}.address": "{{data.data.{{iterator#0}}.attributes.address}}",
+                                "cinema-card.{{iterator#0}}.subway.name": "{{data.data.{{iterator#0}}.attributes.subway.0.name}}",
+                                "cinema-card.{{iterator#0}}.subway.color": "{{data.data.{{iterator#0}}.attributes.subway.0.color}}",
+                                "cinema-card.{{iterator#0}}.distance": "{{data.data.{{iterator#0}}.attributes.distance}}",
+                                "cinema-card.{{iterator#0}}.is_favorite": "{{data.data.{{iterator#0}}.attributes.isFave}}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "toggle-movie-favorite",
+            "type": "load",
+            "request": {
+                "url": "https://api.kinohod.ru/api/restful/v1/movies/{{sender.id}}/fave",
+                "headers": {
+                    "Cookie": "kinohod_session=fce1cd18c453851c5a4c4688f17081f65c827948",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "type": "{{action.method_type}}",
+                "parameters": {
+                }
+            },
+            "response": {
+                "deserializer": "favorite-movie-deserializer",
+                "deserializers": [
+                    {
+                        "name": "favorite-movie-deserializer",
+                        "type": "object",
+                        "map": {
+                            "objects": {
+                                "is_favorite": "{{action.target_state}}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "toggle-cinema-favorite",
+            "type": "load",
+            "request": {
+                "url": "https://api.kinohod.ru/api/restful/v1/cinemas/{{sender.id}}/fave",
+                "headers": {
+                    "Cookie": "kinohod_session=fce1cd18c453851c5a4c4688f17081f65c827948",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "type": "{{action.method_type}}",
+                "parameters": {
+                }
+            },
+            "response": {
+                "deserializer": "favorite-cinema-deserializer",
+                "deserializers": [
+                    {
+                        "name": "favorite-cinema-deserializer",
+                        "type": "object",
+                        "map": {
+                            "objects": {
+                                "is_favorite": "{{action.target_state}}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "load-movie-detail",
+            "type": "load",
+            "request": {
+                "url": "https://api.kinohod.ru/api/restful/v1/movies/{{action.id}}",
+                "headers":
+                {
+                    "Cookie": "kinohod_session=fce1cd18c453851c5a4c4688f17081f65c827948",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "type": "get",
+                "parameters":
+                {
+                    "city": "1",
+                    "apikey": "4106c187-4237-3ca8-885f-8820a202a944",
+                    "attributes": "movie.all"
+                }
+            },
+            "response": {
+                "deserializer": "load-movie-detail-deserializer",
+                "deserializers": [
+                    {
+                        "name": "load-movie-detail-deserializer",
+                        "type": "object",
+                        "map": {
+                            "target": "movie-detail",
+                            "objects": {
+                                "movie-video-header.title": "{{data.data.attributes.title}}",
+                                "movie-video-header.image": "https://api.kinohod.ru/p/900x900/{{data.data.attributes.posterLandscape.crop}}",
+                                "movie-video-header.genres": "{{data.data.attributes.genres}}",
+                                "movie-video-header.imdb_rating": "{{data.data.attributes.imdbRating}}",
+                                "movie-video-header.countries": "{{data.data.attributes.countries}}",
+                                "movie-video-header.age_restriction": "{{data.data.attributes.ageRestriction}}",
+                                "movie-video-header.duration": "{{data.data.attributes.duration}}",
+                                "movie-video-header.trailers.{{iterator#0}}.extension": "{{data.data.attributes.trailers.0.sources.{{iterator#0}}.extension}}",
+                                "movie-video-header.trailers.{{iterator#0}}.filename": "{{data.data.attributes.trailers.0.sources.{{iterator#0}}.filename}}",
+                                "movie-video-header.trailers.{{iterator#0}}.uuid": "{{data.data.attributes.trailers.0.sources.{{iterator#0}}.uuid}}",
+                                "movie-video-header.trailers.{{iterator#0}}.duration": "{{data.data.attributes.trailers.0.sources.{{iterator#0}}.duration}}",
+                                "movie-video-header.trailers.{{iterator#0}}.content_type": "{{data.data.attributes.trailers.0.sources.{{iterator#0}}.contentType}}",
+                                "movie-info.text": "{{data.data.attributes.annotationFull}}",
+                                "movie-friends-likes.id": "{{data.data.id}}",
+                                "movie-friends-likes.is_favorite": "{{data.data.attributes.isFave}}",
+                                "movie-friends-likes.view_count": "{{data.data.attributes.countLooked}}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "load-cinema-detail",
+            "type": "load",
+            "request": {
+                "url": "https://api.kinohod.ru/api/restful/v1/cinemas/{{action.id}}",
+                "headers":
+                {
+                    "Cookie": "kinohod_session=fce1cd18c453851c5a4c4688f17081f65c827948",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "type": "get",
+                "parameters":
+                {
+                    "city": "1",
+                    "apikey": "4106c187-4237-3ca8-885f-8820a202a944",
+                    "attributes": "cinema.all",
+                    "latitude": "{{action.lat}}",
+                    "longitude": "{{action.lon}}"
+                }
+            },
+            "response": {
+                "deserializer": "load-cinema-detail-deserializer",
+                "deserializers": [
+                    {
+                        "name": "load-cinema-detail-deserializer",
+                        "type": "object",
+                        "map": {
+                            "target": "cinema-detail",
+                            "objects": {
+                                "cinema-header.title": "{{data.data.attributes.title}}",
+                                "cinema-header.image": "https://api.kinohod.ru/p/45x60/{{data.data.attributes.logo.crop}}",
+                                "cinema-header.short_title": "{{data.data.attributes.network.name}}",
+                                "cinema-header.badges": "{{data.data.attributes.labels}}",
+                                "detail-cinema-address.mall": "{{data.data.attributes.mall}}",
+                                "detail-cinema-address.address": "{{data.data.attributes.address}}",
+                                "detail-cinema-address.title": "{{data.data.attributes.title}}",
+                                "detail-cinema-address.latitude": "{{data.data.attributes.location.latitude}}",
+                                "detail-cinema-address.longitude": "{{data.data.attributes.location.longitude}}",
+                                "detail-cinema-address.subway.name": "{{data.data.attributes.subway.0.name}}",
+                                "detail-cinema-address.subway.color": "{{data.data.attributes.subway.0.color}}",
+                                "detail-cinema-address.distance": "{{data.data.attributes.distance}}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "search-query",
+            "type": "load",
+            "request": {
+                "url": "https://api.kinohod.ru/api/restful/v1/search/full",
+                "headers":
+                {
+                    "Cookie": "kinohod_session=fce1cd18c453851c5a4c4688f17081f65c827948",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "type": "get",
+                "parameters":
+                {
+                    "str": "{{action.query}}",
+                    "city": "1",
+                    "apikey": "4106c187-4237-3ca8-885f-8820a202a944",
+                    "latitude": "{{action.lat}}",
+                    "longitude": "{{action.lon}}",
+                    "attributes[]": "movie.all",
+                    "attributes[]": "cinema.short"
+                }
+            },
+            "response": {
+                "deserializer": "cinema-deserializer",
+                "deserializers": [
+                    {
+                        "name": "cinema-deserializer",
+                        "type": "object",
+                        "map": {
+                            "target": "",
+                            "objects":
+                            {
+                                "search.{{iterator#0}}.type": "{{data.data.{{iterator#0}}.type}}",
+                                "search.{{iterator#0}}.cinema-card.title": "{{data.data.{{iterator#0}}.attributes.title}}",
+                                "search.{{iterator#0}}.cinema-card.id": "{{data.data.{{iterator#0}}.id}}",
+                                "search.{{iterator#0}}.cinema-card.mall": "{{data.data.{{iterator#0}}.attributes.mall}}",
+                                "search.{{iterator#0}}.cinema-card.address": "{{data.data.{{iterator#0}}.attributes.address}}",
+                                "search.{{iterator#0}}.cinema-card.subway.name": "{{data.data.{{iterator#0}}.attributes.subway.0.name}}",
+                                "search.{{iterator#0}}.cinema-card.subway.color": "{{data.data.{{iterator#0}}.attributes.subway.0.color}}",
+                                "search.{{iterator#0}}.cinema-card.distance": "{{data.data.{{iterator#0}}.attributes.distance}}",
+                                "search.{{iterator#0}}.cinema-card.is_favorite": "{{data.data.{{iterator#0}}.attributes.isFave}}",
+                                "search.{{iterator#0}}.flat-movie-card.title": "{{data.data.{{iterator#0}}.attributes.title}}",
+                                "search.{{iterator#0}}.flat-movie-card.id": "{{data.data.{{iterator#0}}.id}}",
+                                "search.{{iterator#0}}.flat-movie-card.genres": "{{data.data.{{iterator#0}}.attributes.genres}}",
+                                "search.{{iterator#0}}.flat-movie-card.image_path": "https://api.kinohod.ru/p/570x405/{{data.data.{{iterator#0}}.attributes.poster.crop}}",
+                                "search.{{iterator#0}}.flat-movie-card.imdb_rating": "{{data.data.{{iterator#0}}.attributes.imdbRating}}"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

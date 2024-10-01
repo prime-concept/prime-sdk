@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LabeledTileView" customModule="Armenia_Guide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="157" height="102"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ze4-4N-l83" customClass="BlurView" customModule="Armenia_Guide" customModuleProvider="target">
+                    <rect key="frame" x="7" y="9" width="36.5" height="14.5"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300 м" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GD2-UH-wbo" customClass="PaddingLabel" customModule="Armenia_Guide" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="36.5" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="GD2-UH-wbo" secondAttribute="trailing" id="A4c-fx-w7X"/>
+                        <constraint firstItem="GD2-UH-wbo" firstAttribute="leading" secondItem="Ze4-4N-l83" secondAttribute="leading" id="Gzb-ko-DbB"/>
+                        <constraint firstAttribute="bottom" secondItem="GD2-UH-wbo" secondAttribute="bottom" id="f0E-eM-nch"/>
+                        <constraint firstItem="GD2-UH-wbo" firstAttribute="top" secondItem="Ze4-4N-l83" secondAttribute="top" id="oYf-bD-qwG"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Музей-заповедник &quot;Царицыно&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lx5-T8-ahZ">
+                    <rect key="frame" x="10" y="34.5" width="137" height="57.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ze4-4N-l83" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="7" id="LKK-6J-qZY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Lx5-T8-ahZ" secondAttribute="bottom" constant="10" id="RTp-fn-TZX"/>
+                <constraint firstItem="Lx5-T8-ahZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ze4-4N-l83" secondAttribute="bottom" constant="9" id="X7x-rW-B7u"/>
+                <constraint firstItem="Ze4-4N-l83" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="9" id="twW-TO-ZSX"/>
+                <constraint firstItem="Lx5-T8-ahZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="wtd-y7-z8A"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Lx5-T8-ahZ" secondAttribute="trailing" constant="10" id="x3c-U7-n1c"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="blurView" destination="Ze4-4N-l83" id="809-R8-g8H"/>
+                <outlet property="leftTopLabel" destination="GD2-UH-wbo" id="c4A-3l-wqX"/>
+                <outlet property="titleLabel" destination="Lx5-T8-ahZ" id="ms8-e5-5Mx"/>
+            </connections>
+            <point key="canvasLocation" x="-63.200000000000003" y="37.781109445277366"/>
+        </view>
+    </objects>
+</document>

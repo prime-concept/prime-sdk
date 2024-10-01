@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigatorCitiesViewController" customModule="PrimeSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="anW-Gs-cQj" id="oRV-Vj-7xH"/>
+                <outlet property="searchBar" destination="apS-th-0wG" id="uRc-2E-zIj"/>
+                <outlet property="view" destination="iN0-l3-epB" id="UfS-eX-U96"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="apS-th-0wG">
+                    <rect key="frame" x="7" y="44" width="400" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="anW-Gs-cQj">
+                    <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cUk-it-NTQ">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="anW-Gs-cQj" firstAttribute="top" secondItem="apS-th-0wG" secondAttribute="bottom" id="DWB-Ac-rar"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="anW-Gs-cQj" secondAttribute="trailing" id="GsO-mJ-2gx"/>
+                <constraint firstItem="apS-th-0wG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Laf-sG-WrI"/>
+                <constraint firstItem="anW-Gs-cQj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Mub-N1-ncY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="apS-th-0wG" secondAttribute="trailing" constant="7" id="OHC-y8-vev"/>
+                <constraint firstItem="anW-Gs-cQj" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Vv1-wT-R2U"/>
+                <constraint firstItem="apS-th-0wG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="7" id="cOW-NM-irM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
+        </view>
+    </objects>
+</document>

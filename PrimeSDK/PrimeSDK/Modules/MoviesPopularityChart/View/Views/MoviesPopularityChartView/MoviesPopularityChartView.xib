@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="oGR-C8-Riu" customClass="MoviesPopularityChartView" customModule="PrimeSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="303" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4g-ig-WKH">
+                    <rect key="frame" x="6" y="5" width="291" height="55"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SM-dA-MpZ">
+                    <rect key="frame" x="44" y="25" width="253" height="21.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="lastLineFillPercent">
+                            <integer key="value" value="60"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpk-qm-390">
+                    <rect key="frame" x="44" y="12" width="253" height="12"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="lastLineFillPercent">
+                            <integer key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="e2x-lc-qAQ">
+                    <rect key="frame" x="0.0" y="0.0" width="37" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="HV3-Dm-7cn"/>
+                        <constraint firstAttribute="width" constant="37" id="e0B-nG-F52"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Rpk-qm-390" firstAttribute="leading" secondItem="e2x-lc-qAQ" secondAttribute="trailing" constant="7" id="2tm-GH-fJj"/>
+                <constraint firstAttribute="bottom" secondItem="k4g-ig-WKH" secondAttribute="bottom" id="4i1-ef-cqh"/>
+                <constraint firstAttribute="bottom" secondItem="e2x-lc-qAQ" secondAttribute="bottom" constant="5" id="5Os-Ka-N95"/>
+                <constraint firstAttribute="trailing" secondItem="Rpk-qm-390" secondAttribute="trailing" constant="6" id="5nu-0u-4F6"/>
+                <constraint firstItem="k4g-ig-WKH" firstAttribute="leading" secondItem="PVn-bg-Sl7" secondAttribute="leading" constant="6" id="5oP-pv-QOJ"/>
+                <constraint firstItem="PVn-bg-Sl7" firstAttribute="trailing" secondItem="k4g-ig-WKH" secondAttribute="trailing" constant="6" id="G21-Ap-RUS"/>
+                <constraint firstItem="0SM-dA-MpZ" firstAttribute="leading" secondItem="Rpk-qm-390" secondAttribute="leading" id="Oyg-uI-0Do"/>
+                <constraint firstItem="0SM-dA-MpZ" firstAttribute="top" secondItem="Rpk-qm-390" secondAttribute="bottom" constant="1" id="PDM-A1-ur5"/>
+                <constraint firstItem="0SM-dA-MpZ" firstAttribute="trailing" secondItem="Rpk-qm-390" secondAttribute="trailing" id="ROH-49-dF8"/>
+                <constraint firstItem="e2x-lc-qAQ" firstAttribute="top" secondItem="oGR-C8-Riu" secondAttribute="top" id="cNF-8v-PXz"/>
+                <constraint firstItem="e2x-lc-qAQ" firstAttribute="leading" secondItem="PVn-bg-Sl7" secondAttribute="leading" id="omp-27-Jim"/>
+                <constraint firstItem="k4g-ig-WKH" firstAttribute="top" secondItem="e2x-lc-qAQ" secondAttribute="top" constant="5" id="pHl-aF-EnN"/>
+                <constraint firstItem="Rpk-qm-390" firstAttribute="top" secondItem="k4g-ig-WKH" secondAttribute="top" constant="7" id="u0v-iH-55A"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="PVn-bg-Sl7"/>
+            <connections>
+                <outlet property="containerView" destination="k4g-ig-WKH" id="R1q-N0-CJm"/>
+                <outlet property="genresLabel" destination="Rpk-qm-390" id="wcx-gS-Ntm"/>
+                <outlet property="imageView" destination="e2x-lc-qAQ" id="7N8-sA-g8C"/>
+                <outlet property="titleLabel" destination="0SM-dA-MpZ" id="Mk8-7Y-xfL"/>
+            </connections>
+            <point key="canvasLocation" x="-9.4202898550724647" y="-219.97767857142856"/>
+        </view>
+    </objects>
+</document>

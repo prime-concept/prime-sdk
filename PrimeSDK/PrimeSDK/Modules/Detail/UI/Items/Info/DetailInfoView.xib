@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hsJ-uN-uwb" customClass="DetailInfoView" customModule="PrimeSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="97"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQ5-xG-Xen">
+                    <rect key="frame" x="0.0" y="35" width="393" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text text text text text text text text text text text text text text text text text text text text text text text text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTN-Tc-lOc">
+                            <rect key="frame" x="15" y="15" width="363" height="45"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0o-lp-3L1" customClass="GradientContainerView" customModule="PrimeSDK" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="8" width="393" height="52"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwJ-2G-pwZ">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onTap:" destination="hsJ-uN-uwb" eventType="touchUpInside" id="I3U-48-lHl"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="nTN-Tc-lOc" secondAttribute="bottom" id="C0L-FI-5wQ"/>
+                        <constraint firstItem="gwJ-2G-pwZ" firstAttribute="leading" secondItem="YQ5-xG-Xen" secondAttribute="leading" id="Chc-Hf-RLe"/>
+                        <constraint firstItem="k0o-lp-3L1" firstAttribute="leading" secondItem="YQ5-xG-Xen" secondAttribute="leading" id="Da7-Cj-Es0"/>
+                        <constraint firstItem="gwJ-2G-pwZ" firstAttribute="top" secondItem="YQ5-xG-Xen" secondAttribute="top" id="Dde-id-CSR"/>
+                        <constraint firstAttribute="bottom" secondItem="gwJ-2G-pwZ" secondAttribute="bottom" id="G0K-N5-fBi"/>
+                        <constraint firstAttribute="trailing" secondItem="nTN-Tc-lOc" secondAttribute="trailing" constant="15" id="Gfn-ZD-yDX"/>
+                        <constraint firstItem="nTN-Tc-lOc" firstAttribute="top" secondItem="YQ5-xG-Xen" secondAttribute="top" constant="15" id="IJ0-LO-UAg"/>
+                        <constraint firstAttribute="height" constant="60" id="KJG-Me-rLf"/>
+                        <constraint firstItem="nTN-Tc-lOc" firstAttribute="leading" secondItem="YQ5-xG-Xen" secondAttribute="leading" constant="15" id="KuX-Ur-nN6"/>
+                        <constraint firstAttribute="trailing" secondItem="gwJ-2G-pwZ" secondAttribute="trailing" id="Yb4-gL-fCE"/>
+                        <constraint firstItem="k0o-lp-3L1" firstAttribute="top" secondItem="YQ5-xG-Xen" secondAttribute="top" constant="8" id="ZM6-2e-aBE"/>
+                        <constraint firstAttribute="bottom" secondItem="gwJ-2G-pwZ" secondAttribute="bottom" id="nNN-vW-dzd"/>
+                        <constraint firstAttribute="bottom" secondItem="k0o-lp-3L1" secondAttribute="bottom" id="wcV-fP-6Ga"/>
+                        <constraint firstAttribute="trailing" secondItem="k0o-lp-3L1" secondAttribute="trailing" id="xEd-7q-POC"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О фильме" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wn8-pa-jlk">
+                    <rect key="frame" x="15" y="10" width="363" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="IPB-gJ-N5O"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="YQ5-xG-Xen" firstAttribute="leading" secondItem="OXr-8e-N0l" secondAttribute="leading" id="9xm-FX-geG"/>
+                <constraint firstItem="wn8-pa-jlk" firstAttribute="top" secondItem="OXr-8e-N0l" secondAttribute="top" constant="10" id="Sew-zS-S4E"/>
+                <constraint firstItem="gwJ-2G-pwZ" firstAttribute="top" secondItem="wn8-pa-jlk" secondAttribute="bottom" constant="-5" id="WFY-EC-MON"/>
+                <constraint firstItem="wn8-pa-jlk" firstAttribute="leading" secondItem="OXr-8e-N0l" secondAttribute="leading" constant="15" id="oiZ-9b-cbO"/>
+                <constraint firstItem="OXr-8e-N0l" firstAttribute="bottom" secondItem="YQ5-xG-Xen" secondAttribute="bottom" priority="999" id="qcm-VT-Fvw"/>
+                <constraint firstItem="OXr-8e-N0l" firstAttribute="trailing" secondItem="wn8-pa-jlk" secondAttribute="trailing" constant="15" id="yWN-F1-DmT"/>
+                <constraint firstItem="OXr-8e-N0l" firstAttribute="trailing" secondItem="YQ5-xG-Xen" secondAttribute="trailing" id="yhf-t1-WE4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="OXr-8e-N0l"/>
+            <connections>
+                <outlet property="bottomTextConstraint" destination="C0L-FI-5wQ" id="DqA-kO-dxG"/>
+                <outlet property="collapsedHeightConstraint" destination="KJG-Me-rLf" id="6P8-cc-5gb"/>
+                <outlet property="gradientContainerView" destination="k0o-lp-3L1" id="WST-FC-rFa"/>
+                <outlet property="textLabel" destination="nTN-Tc-lOc" id="bmL-Dx-HXm"/>
+                <outlet property="titleHeightConstraint" destination="IPB-gJ-N5O" id="Bb4-3k-MpN"/>
+                <outlet property="titleInfoVerticalConstraint" destination="WFY-EC-MON" id="sr3-XP-FiA"/>
+                <outlet property="titleLabel" destination="wn8-pa-jlk" id="ogI-FD-OhE"/>
+            </connections>
+            <point key="canvasLocation" x="-245.59999999999999" y="-253.2233883058471"/>
+        </view>
+    </objects>
+</document>
